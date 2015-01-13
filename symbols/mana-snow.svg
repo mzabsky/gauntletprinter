@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="100"
+   id="svg4776"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="mana-g.svg">
+  <defs
+     id="defs4778" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="54.627078"
+     inkscape:cy="63.23211"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1137"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     gridtolerance="10"
+     objecttolerance="20"
+     guidetolerance="10000">
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,100"
+       id="guide4839" />
+    <sodipodi:guide
+       position="100,0"
+       orientation="-100,0"
+       id="guide4841" />
+    <sodipodi:guide
+       position="100,100"
+       orientation="0,-100"
+       id="guide4843" />
+    <sodipodi:guide
+       position="0,100"
+       orientation="100,0"
+       id="guide4845" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4781">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-270,-119.50504)">
+    <g
+       id="g4737"
+       transform="translate(269.9995,119.50504)">
+      <circle
+         style="fill:#c9c4be"
+         sodipodi:ry="50"
+         sodipodi:rx="50"
+         sodipodi:cy="50"
+         sodipodi:cx="50.000999"
+         d="m 100.001,50 c 0,27.614237 -22.385763,50 -50.000001,50 C 22.386762,100 9.9945068e-4,77.614237 9.9945068e-4,50 9.9945068e-4,22.385763 22.386762,0 50.000999,0 77.615237,0 100.001,22.385763 100.001,50 z"
+         cx="50.000999"
+         cy="50"
+         r="50"
+         id="circle4739" />
+      <g
+         id="g4741">
+        <polygon
+           style="fill:#0d0f0f"
+           points="75.708,83.891 77.833,80.105 75.479,76.027 92.334,74.439 85.279,59.05 89.99,59.05 92.203,55.318 100,50 92.203,44.681 89.99,40.95 85.279,40.95 92.333,25.559 75.479,23.973 77.833,19.893 75.707,16.111 75,6.699 66.496,10.792 62.158,10.843 59.803,14.922 50,1.118 40.198,14.922 37.843,10.843 33.505,10.792 25,6.699 24.293,16.111 22.168,19.893 24.523,23.973 7.667,25.56 14.722,40.95 10.011,40.95 7.798,44.682 0,50 7.797,55.318 10.011,59.05 14.722,59.05 7.668,74.441 24.523,76.027 22.168,80.105 24.293,83.889 25.001,93.303 33.505,89.209 37.843,89.157 40.198,85.077 50.001,98.881 59.803,85.077 62.158,89.157 66.496,89.208 75.001,93.303 "
+           id="polygon4743" />
+        <polygon
+           style="fill:#ffffff"
+           points="68.609,78.188 55.088,52.938 83.717,52.023 87.223,54.048 90.727,52.025 90.727,47.976 87.223,45.953 83.717,47.976 55.088,47.063 68.611,21.813 72.117,19.789 72.117,15.743 68.611,13.719 65.107,15.742 65.105,19.789 50.001,44.125 34.896,19.789 34.895,15.741 31.392,13.718 27.885,15.743 27.885,19.789 31.391,21.813 44.913,47.063 16.285,47.976 12.778,45.953 9.275,47.975 9.275,52.023 12.778,54.047 16.285,52.023 44.913,52.938 31.39,78.188 27.885,80.211 27.884,84.258 31.39,86.281 34.895,84.258 34.895,80.211 50,55.875 65.105,80.211 65.105,84.259 68.609,86.282 72.116,84.258 72.116,80.212 "
+           id="polygon4745" />
+      </g>
+      <polygon
+         style="fill:#ffffff"
+         points="50.001,10.104 57.051,22.393 50.001,34.681 42.951,22.393 "
+         id="polygon4747" />
+      <polygon
+         style="fill:#ffffff"
+         points="15.45,30.052 29.617,30.09 36.734,42.34 22.567,42.301 "
+         id="polygon4749" />
+      <polygon
+         style="fill:#ffffff"
+         points="15.449,69.947 22.566,57.697 36.733,57.659 29.616,69.908 "
+         id="polygon4751" />
+      <polygon
+         style="fill:#ffffff"
+         points="50,89.896 42.949,77.607 50,65.318 57.05,77.607 "
+         id="polygon4753" />
+      <polygon
+         style="fill:#ffffff"
+         points="84.551,69.947 70.384,69.91 63.268,57.66 77.434,57.699 "
+         id="polygon4755" />
+      <polygon
+         style="fill:#ffffff"
+         points="84.551,30.053 77.436,42.303 63.268,42.341 70.385,30.092 "
+         id="polygon4757" />
+    </g>
+  </g>
+</svg>

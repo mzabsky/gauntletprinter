@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="100"
+   id="svg4776"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="mana-inf.svg">
+  <defs
+     id="defs4778" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="54.627078"
+     inkscape:cy="63.23211"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1137"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     gridtolerance="10"
+     objecttolerance="20"
+     guidetolerance="10000">
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,100"
+       id="guide4839" />
+    <sodipodi:guide
+       position="100,0"
+       orientation="-100,0"
+       id="guide4841" />
+    <sodipodi:guide
+       position="100,100"
+       orientation="0,-100"
+       id="guide4843" />
+    <sodipodi:guide
+       position="0,100"
+       orientation="100,0"
+       id="guide4845" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4781">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-270,-119.50504)">
+    <g
+       transform="translate(900,-195.49295)"
+       id="g4611">
+      <circle
+         style="fill:#cac5c0"
+         sodipodi:ry="50"
+         sodipodi:rx="50"
+         sodipodi:cy="364.99799"
+         sodipodi:cx="-580"
+         d="m -530,364.99799 c 0,27.61423 -22.38576,50 -50,50 -27.61424,0 -50,-22.38577 -50,-50 0,-27.61424 22.38576,-50 50,-50 27.61424,0 50,22.38576 50,50 z"
+         cx="-580"
+         cy="364.99799"
+         r="50"
+         id="circle4613" />
+    </g>
+    <path
+       style="fill:#0d0f0f"
+       inkscape:connector-curvature="0"
+       d="m 322.307,125.75705 v 27.246 c 0,3.26 1.371,4.889 4.117,4.889 h 0.715 v 1.865 h -14.496 v -1.865 h 0.91 c 2.656,0 3.98,-1.629 3.98,-4.889 v -17.873 c 0,-3.297 -1.145,-4.947 -3.434,-4.947 h -1.457 v -1.805 h 0.523 c 2.832,0 5.395,-0.875 7.688,-2.621 h 1.454 l 0,0 z"
+       id="path4615" />
+    <path
+       style="fill:#0d0f0f"
+       inkscape:connector-curvature="0"
+       d="m 331.553,200.01105 -2.504,8.455 h -20.82 v -1.809 c 1.012,-1.127 3.227,-3.4 6.648,-6.822 2.063,-2.063 4.102,-4.238 6.121,-6.531 1.012,-1.129 1.789,-2.102 2.332,-2.918 1.207,-1.746 1.809,-3.535 1.809,-5.363 0,-1.789 -0.555,-3.363 -1.66,-4.723 -1.105,-1.363 -2.531,-2.045 -4.285,-2.045 -3.773,0 -6.727,2.551 -8.863,7.643 l -1.867,-0.701 c 2.527,-7.15 6.508,-10.729 11.953,-10.729 2.684,0 4.965,0.912 6.855,2.738 1.887,1.828 2.828,4.082 2.828,6.768 0,3.422 -1.965,6.766 -5.891,10.029 l -4.082,3.379 c -2.605,2.184 -4.766,4.225 -6.473,6.129 -0.117,0.113 -0.352,0.391 -0.699,0.814 h 10.848 c 1.668,0 2.934,-0.33 3.789,-0.992 0.734,-0.582 1.457,-1.689 2.156,-3.32 h 1.805 v -0.002 z"
+       id="path4617" />
+    <g
+       transform="translate(900,-195.49295)"
+       id="g4619">
+      <path
+         style="fill:#0d0f0f"
+         inkscape:connector-curvature="0"
+         d="m -609.268,364.455 v -2.91 h 58.328 v 2.91 h -58.328 z"
+         id="path4621" />
+    </g>
+  </g>
+</svg>
