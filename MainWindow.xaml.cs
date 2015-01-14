@@ -61,7 +61,7 @@ namespace GauntletPrinter
 
                 List<Card> additionalCards = new List<Card>();
 
-                // Split cards are represented as a separate left and right half in the source data
+                // Split, double faced and flip cards are represented as a separate left and right half in the source data
                 foreach (var leftHalf in allCards.Where(p => p.Layout == "split" && p.Names.FirstOrDefault() == p.Name))
                 {
                     var rightHalfName = leftHalf.Names.LastOrDefault();
@@ -114,6 +114,7 @@ namespace GauntletPrinter
                     return;
                 }
 
+                // Parse the deck strings and shorten the text of cards that are included in one or more decks
                 var shortener = new CardTextShortener();
                 var decks = new List<List<Card>>();
                 foreach (var deckString in deckStrings)
@@ -157,6 +158,7 @@ namespace GauntletPrinter
                     decks.Add(deck);
                 }
 
+                // Validate sizes of the decks
                 if (decks.Any(p => p.Count != decks[0].Count))
                 {
                     var numberOfValidDecks = decks.TakeWhile(p => p.Count == decks[0].Count).Count();
@@ -165,6 +167,7 @@ namespace GauntletPrinter
                     throw new ApplicationException("All decks must contain the same number of cards (deck 1 contains " + decks[0].Count + " cards, deck " + (numberOfValidDecks + 1) + " contains " + invalidDeck.Count + " cards.)");
                 }
 
+                // Format the decks into HTML
                 var arranger = new SimpleArranger();
                 decks = arranger.ArrangeCards(decks);
 
