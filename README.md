@@ -1,6 +1,6 @@
 # GauntletPrinter
 
-GauntletPrinter is a new tool to print multiple decks on a single deck of prixies.
+GauntletPrinter is a new tool to print multiple decks on a single deck of proxies.
 
 It is an application for Windows (.Net Framework 4.5 required).
 
