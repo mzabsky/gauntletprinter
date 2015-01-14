@@ -131,7 +131,7 @@ namespace GauntletPrinter
                             continue;
                         }
 
-                        var countString = match.Groups["count"].Captures[i].ToString().Trim();
+                        var countString = match.Groups["count"].Captures[i].ToString() == "" ? "1" : match.Groups["count"].Captures[i].ToString().Trim();
                         var count = int.Parse(countString);
 
                         for (int j = 0; j < count; j++)
@@ -280,14 +280,19 @@ namespace GauntletPrinter
 
                 File.WriteAllText("cards.html", str);
 
-                if(MessageBox.Show("File generated. Do you wish to open it?", "Finished", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                if (MessageBox.Show("File generated. Do you wish to open it?" + Environment.NewLine + Environment.NewLine + "WARNING: Internet Explorer does not display the cards correctly. Google Chrome is recommended to print the cards.", "Finished", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     Process.Start("cards.html");
                 }
             }
+            catch (ApplicationException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
+            }
             catch (Exception ex)
             {
-                MessageBox.Show("Error:" + Environment.NewLine + ex.ToString());
+                MessageBox.Show(ex.ToString());
                 return;
             }
         }

@@ -54,7 +54,7 @@ namespace GauntletPrinter
                     }
                 }
 
-                if (generatedDecks[cardInDeck.DeckNumber, foundSlot] != null) Debugger.Break();
+                if (generatedDecks[cardInDeck.DeckNumber, foundSlot] != null) throw new ApplicationException("Could not arrange cards.");
                 generatedDecks[cardInDeck.DeckNumber, foundSlot] = cardInDeck.Card;
             }
 
