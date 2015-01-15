@@ -192,7 +192,19 @@ namespace GauntletPrinter
             };
         }
 
-        private string ReplaceSymbols(string str)
+        private string ReplaceSymbols(string str, bool isGrayscale)
+        {
+            if(isGrayscale)
+            {
+                return this.ReplaceSymbolsGrayscale(str);
+            }
+            else
+            {
+                return this.ReplaceSymbolsColored(str);
+            }
+        }
+
+        private string ReplaceSymbolsColored(string str)
         {
             str = str.Replace("{0}", @"<img src=""symbols/mana-0.svg"" width=""10"" height=""10"" />");
             str = str.Replace("{1}", @"<img src=""symbols/mana-1.svg"" width=""10"" height=""10"" />");
@@ -252,7 +264,67 @@ namespace GauntletPrinter
             return str;
         }
 
-        public void ProcessCard(Card card)
+        private string ReplaceSymbolsGrayscale(string str)
+        {
+            str = str.Replace("{0}", @"<img src=""symbols/mana-0.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{1}", @"<img src=""symbols/mana-1.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{2}", @"<img src=""symbols/mana-2.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{3}", @"<img src=""symbols/mana-3.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{4}", @"<img src=""symbols/mana-4.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{5}", @"<img src=""symbols/mana-5.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{6}", @"<img src=""symbols/mana-6.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{7}", @"<img src=""symbols/mana-7.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{8}", @"<img src=""symbols/mana-8.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{9}", @"<img src=""symbols/mana-9.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{10}", @"<img src=""symbols/mana-10.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{11}", @"<img src=""symbols/mana-11.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{12}", @"<img src=""symbols/mana-12.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{13}", @"<img src=""symbols/mana-13.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{14}", @"<img src=""symbols/mana-14.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{15}", @"<img src=""symbols/mana-15.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{16}", @"<img src=""symbols/mana-16.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{17}", @"<img src=""symbols/mana-17.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{18}", @"<img src=""symbols/mana-18.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{19}", @"<img src=""symbols/mana-19.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{20}", @"<img src=""symbols/mana-20.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{X}", @"<img src=""symbols/mana-x.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{Y}", @"<img src=""symbols/mana-y.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{Z}", @"<img src=""symbols/mana-z.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{W}", @"<img src=""symbols/mana-w-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{U}", @"<img src=""symbols/mana-u-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{B}", @"<img src=""symbols/mana-b-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{R}", @"<img src=""symbols/mana-r-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{G}", @"<img src=""symbols/mana-g-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{2/W}", @"<img src=""symbols/mana-2w-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{2/U}", @"<img src=""symbols/mana-2u-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{2/B}", @"<img src=""symbols/mana-2b-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{2/R}", @"<img src=""symbols/mana-2r-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{2/G}", @"<img src=""symbols/mana-2g-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{W/P}", @"<img src=""symbols/mana-pw-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{U/P}", @"<img src=""symbols/mana-pu-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{B/P}", @"<img src=""symbols/mana-pb-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{R/P}", @"<img src=""symbols/mana-pr-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{G/P}", @"<img src=""symbols/mana-pg-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{W/U}", @"<img src=""symbols/mana-wu-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{W/B}", @"<img src=""symbols/mana-wb-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{U/B}", @"<img src=""symbols/mana-ub-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{U/R}", @"<img src=""symbols/mana-ur-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{B/R}", @"<img src=""symbols/mana-br-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{B/G}", @"<img src=""symbols/mana-bg-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{R/W}", @"<img src=""symbols/mana-rw-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{R/G}", @"<img src=""symbols/mana-rg-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{G/W}", @"<img src=""symbols/mana-gw-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{G/U}", @"<img src=""symbols/mana-gu-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{T}", @"<img src=""symbols/tap.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{Q}", @"<img src=""symbols/untap.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{+1/+1}", @"<img src=""symbols/counter-plus.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{-1/-1}", @"<img src=""symbols/counter-minus.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{charge}", @"<img src=""symbols/counter-charge-gray.svg"" width=""10"" height=""10"" />");
+            str = str.Replace("{any}", @"<img src=""symbols/mana-any.svg"" width=""10"" height=""10"" />");
+            return str;
+        }
+
+        public void ProcessCard(Card card, bool isGrayscale)
         {
             if (card.Text != null && !card.Processed)
             {
@@ -273,14 +345,14 @@ namespace GauntletPrinter
 
                 //if (card.Name.Contains("Delver")) Debugger.Break();
 
-                card.Text = this.ReplaceSymbols(card.Text);
+                card.Text = this.ReplaceSymbols(card.Text, isGrayscale);
             }
 
             card.Type = card.Type.Replace("—", "-");  
 
             if (card.ManaCost != null)
             {
-                card.ManaCost = this.ReplaceSymbols(card.ManaCost);
+                card.ManaCost = this.ReplaceSymbols(card.ManaCost, isGrayscale);
             }  
         }
     }

@@ -153,7 +153,7 @@ namespace GauntletPrinter
 
                     foreach (var card in deck)
                     {
-                        shortener.ProcessCard(card);
+                        shortener.ProcessCard(card, this.grayscaleSymbols.IsChecked == true);
                     }
 
                     decks.Add(deck);
