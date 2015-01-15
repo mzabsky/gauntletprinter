@@ -29,8 +29,9 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Options">
-                <StackPanel Margin="10">
-                    <CheckBox Name="deckNumbers" IsChecked="True" ToolTip="When enabled, small number denoting to which deck the card belongs to will be placed before each chard name.">Include deck numbers on cards.</CheckBox>
+                <StackPanel Margin="5">
+                    <CheckBox Name="deckNumbers" IsChecked="True" ToolTip="When enabled, small number denoting to which deck the card belongs to will be placed before each chard name." Margin="3">Include deck numbers on cards.</CheckBox>
+                    <CheckBox Name="colorCode" IsChecked="True" ToolTip="When enabled, a narrow strip highlighting to which deck the card belongs to will be added to each card." Margin="3">Include deck identification color strip (requires color printing).</CheckBox>
                 </StackPanel>
             </TabItem>
         </TabControl>

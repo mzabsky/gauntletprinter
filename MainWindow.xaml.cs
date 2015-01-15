@@ -194,11 +194,32 @@ namespace GauntletPrinter
                                 width: 100%;
                                 height: 100%;
                                 font-size: 3mm;
-                                padding: 0.5mm;   
-                            }
+                                padding: 0; 
+                                border-spacing: 0;
+                            }";
 
-                            .card td {
-                                padding: 1px;
+                            if(this.colorCode.IsChecked == true)
+                            {
+                                str += @"tr.card1 td{
+                                    border-left: 4px #B2F1BA solid;
+                                }
+
+                                tr.card2 td{
+                                    border-left: 4px #C3B5EB solid;
+                                }
+
+                                tr.card3 td{
+                                    border-left: 4px #FFF4BC solid;
+                                }
+
+                                tr.card4 td{
+                                    border-left: 4px #FFBFBC solid;
+                                }";
+                            }
+                            
+
+                            str += @".card td {
+                                padding: 1px 1px 1px 1mm;
                             }
 
                             .cardNameRow {
@@ -268,23 +289,23 @@ namespace GauntletPrinter
                             var card = deck[i];
 
                             str += @"
-                            <tr class=""cardNameRow"">
+                            <tr class=""cardNameRow card" + (j + 1) + @""">
                                 <td class=" + (deck != decks.FirstOrDefault() ? "cardSeparator" : "") + @">
                                     " + (this.deckNumbers.IsChecked == true ? @"<span class=""deckNumber"">" + (j + 1) + @"</span> " : "") + @"
                                     <span class=""cardName"">" + card.Name + @"</span> 
                                     <span class=""manaCost"">" + (card.ManaCost != null ? card.ManaCost : "") + @"</span>
                                 </td>
                             </tr>
-                            <tr class=""cardTypeRow"">
+                            <tr class=""cardTypeRow card" + (j + 1) + @""">
                                 <td><span class=""cardType"">" + card.Type + @"</span> <span class=""powerToughness"">" + (card.Power != null ? card.Power + "/" + card.Toughness : (card.Loyalty != null ? card.Loyalty.ToString() : "")) + @"</span></td>
                             </tr>";
 
-                            if (card.Text != null)
-                            {
-                                str += @"<tr>
+                            /*if (card.Text != null)
+                            {*/
+                                str += @"<tr class=""cardText card" + (j + 1) + @""">
                                     <td>" + card.Text + @"</td>
                                 </tr>";
-                            }
+                            /*}*/
                         }
                         else
                         {
@@ -296,7 +317,7 @@ namespace GauntletPrinter
 
                     str += @"
                                 
-                                        <tr></tr>
+                                        <!--<tr></tr>-->
                                     </table>
                                 </div>
                             </div>";
