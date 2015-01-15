@@ -30,6 +30,7 @@ namespace GauntletPrinter
         public string Text { get; set; }
         public string Power { get; set; }
         public string Toughness { get; set; }
+        public string Loyalty { get; set; }
         public string ImageName { get; set; }
         public List<string> Names { get; set; }
 
@@ -272,7 +273,7 @@ namespace GauntletPrinter
                                     <span class=""deckNumber"">" + (j + 1) + @"</span> <span class=""cardName"">" + card.Name + @"</span> <span class=""manaCost"">" + (card.ManaCost != null ? card.ManaCost : "") + @"</span></td>
                             </tr>
                             <tr class=""cardTypeRow"">
-                                <td><span class=""cardType"">" + card.Type + @"</span> <span class=""powerToughness"">" + (card.Power != null ? card.Power + "/" + card.Toughness : "") + @"</span></td>
+                                <td><span class=""cardType"">" + card.Type + @"</span> <span class=""powerToughness"">" + (card.Power != null ? card.Power + "/" + card.Toughness : (card.Loyalty != null ? card.Loyalty.ToString() : "")) + @"</span></td>
                             </tr>";
 
                             if (card.Text != null)
