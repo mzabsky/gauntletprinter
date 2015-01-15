@@ -253,7 +253,15 @@ namespace GauntletPrinter
                             }
 
                             .cardSeparator {
+                                height:1px;
+                                font-size: 1px;
+                                padding: 0;
+                            }
+
+                            .cardSeparator hr{
+                                border: 0;
                                 border-top: 1px black solid;
+                                background: none;
                             }
 
                             .cardTypeRow {
@@ -288,9 +296,16 @@ namespace GauntletPrinter
                         {
                             var card = deck[i];
 
-                            str += @"
-                            <tr class=""cardNameRow card" + (j + 1) + @""">
-                                <td class=" + (deck != decks.FirstOrDefault() ? "cardSeparator" : "") + @">
+                            if(j > 0)
+                            {
+                                str += @"
+                                    <tr class=""cardSeparator card" + (j + 1) + @""">
+                                        <td><hr /></td>
+                                    </tr>";
+                            }
+                            
+                            str += @"<tr class=""cardNameRow card" + (j + 1) + @""">
+                                <td>
                                     " + (this.deckNumbers.IsChecked == true ? @"<span class=""deckNumber"">" + (j + 1) + @"</span> " : "") + @"
                                     <span class=""cardName"">" + card.Name + @"</span> 
                                     <span class=""manaCost"">" + (card.ManaCost != null ? card.ManaCost : "") + @"</span>
