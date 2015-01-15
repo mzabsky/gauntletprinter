@@ -26,6 +26,7 @@ namespace GauntletPrinter
                 }
             }
 
+            // Put the cards into the proxy deck starting with the cards with the longest text
             var orderedData = data.OrderByDescending(p => p.Card.TextLength);
 
             int deckSize = decks[0].Count;
@@ -58,6 +59,7 @@ namespace GauntletPrinter
                 generatedDecks[cardInDeck.DeckNumber, foundSlot] = cardInDeck.Card;
             }
 
+            // Reformat the deck array into the output format
             var outputDecks = new List<List<Card>>();
             for (int i = 0; i < decks.Count; i++)
             {
