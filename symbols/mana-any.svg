@@ -14,7 +14,7 @@
    id="svg4776"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="mana-half.svg">
+   sodipodi:docname="mana-any.svg">
   <defs
      id="defs4778" />
   <sodipodi:namedview
@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="-103.83392"
-     inkscape:cy="-80.816386"
+     inkscape:cx="-187.67658"
+     inkscape:cy="20.198868"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -41,7 +41,7 @@
      fit-margin-bottom="0"
      gridtolerance="10"
      objecttolerance="20"
-     guidetolerance="10000">
+     guidetolerance="10">
     <sodipodi:guide
        position="0,0"
        orientation="0,100"
@@ -67,7 +67,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -91,17 +91,23 @@
          r="50"
          id="circle4259" />
     </g>
-    <text
-       xml:space="preserve"
-       style="font-size:250px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times;-inkscape-font-specification:Times"
-       x="268.06396"
-       y="276.35074"
-       id="text6379"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan6381"
-         x="268.06396"
-         y="276.35074"
-         style="font-size:210px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri">*</tspan></text>
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;fill-opacity:1;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3034"
+       sodipodi:sides="5"
+       sodipodi:cx="42.426407"
+       sodipodi:cy="54.543137"
+       sodipodi:r1="148.71559"
+       sodipodi:r2="74.357796"
+       sodipodi:arg1="-2.9015563"
+       sodipodi:arg2="-2.2732378"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M -102.02541,19.187799 31.413265,-93.764105 180.07173,-1.7604413 138.50903,168.05285 -35.836584,180.99958 z"
+       transform="matrix(-0.18331104,-0.15490982,0.15490982,-0.18331104,319.337,186.94995)"
+       inkscape:transform-center-x="0.0090287524"
+       inkscape:transform-center-y="-3.3996899" />
   </g>
 </svg>
