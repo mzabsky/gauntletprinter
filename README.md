@@ -10,9 +10,9 @@ Sample gauntlets
 ---------------------------
 These are gauntlets generated with this tool.
 
-**Modern** ([Maindeck PDF](http://puu.sh/ev6K9/a091052d3d.pdf), [Sideboard PDF](http://puu.sh/ev7pT/eb2baaecbd.pdf)) - contains [Vincent Pau's Pod](http://www.mtggoldfish.com/deck/258973), [Stephen Berrios's UR Delver](http://www.mtggoldfish.com/deck/258717), [Erik Smith's Junk](http://www.mtggoldfish.com/deck/258960) and [osmanozguney's UR Twin](http://www.mtggoldfish.com/deck/258740).
+**Modern** ([colored maindeck PDF](http://puu.sh/eyBQT/51615aafce.pdf), colored sideboard PDF](http://puu.sh/eyALp/fe24c5394c.pdf), [grayscale maindeck PDF](http://puu.sh/eyAlv/5a5749938f.pdf), [grayscale sideboard PDF](http://puu.sh/eyAzl/f0b7fa580b.pdf)) - contains [Vincent Pau's Pod](http://www.mtggoldfish.com/deck/258973), [Stephen Berrios's UR Delver](http://www.mtggoldfish.com/deck/258717), [Erik Smith's Junk](http://www.mtggoldfish.com/deck/258960) and [osmanozguney's UR Twin](http://www.mtggoldfish.com/deck/258740).
 
-**Duel Commander** ([PDF](http://puu.sh/ev5zV/bcd1e22dbd.pdf)) - contains [icecoldjazz's Azusa](http://www.mtgsalvation.com/forums/the-game/commander-edh/forum-1-vs-1-commander-decklists/564451-azusa-lost-but-seeking-aka-ramp-dec), [hakz's Rafiq](http://forums.mtgsalvation.com/showthread.php?t=392838), [Leroy's Grand Arbiter Augustin](http://forums.mtgsalvation.com/showthread.php?t=497498) and [dawN's Exava](http://forums.mtgsalvation.com/showthread.php?t=341982).
+**Duel Commander** ([colored PDF](http://puu.sh/eyzIX/746537535d.pdf), [grayscale PDF](http://puu.sh/eyzYB/a4e87936d3.pdf)) - contains [icecoldjazz's Azusa](http://www.mtgsalvation.com/forums/the-game/commander-edh/forum-1-vs-1-commander-decklists/564451-azusa-lost-but-seeking-aka-ramp-dec), [hakz's Rafiq](http://forums.mtgsalvation.com/showthread.php?t=392838), [Leroy's Grand Arbiter Augustin](http://forums.mtgsalvation.com/showthread.php?t=497498) and [dawN's Exava](http://forums.mtgsalvation.com/showthread.php?t=341982).
 
-[Download binaries for Windows](http://puu.sh/evaxj/e969b7a0ed.zip)
+[Download binaries for Windows](http://puu.sh/eyC1R/9076b12237.zip)
 -------------------------
