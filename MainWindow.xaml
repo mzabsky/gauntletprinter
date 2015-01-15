@@ -5,25 +5,34 @@
     <DockPanel>
         <!--<TextBlock FontSize="20" DockPanel.Dock="Top">1) Fill in one or more decklists</TextBlock>-->
         <Button FontSize="20" Padding="5" Height="50" DockPanel.Dock="Bottom" Click="Button_Click">Generate</Button>
-        <Grid  DockPanel.Dock="Top">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="20"></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <TextBlock Grid.Column="0" Grid.Row="0">Deck 1</TextBlock>
-            <TextBlock Grid.Column="1" Grid.Row="0">Deck 2</TextBlock>
-            <TextBlock Grid.Column="2" Grid.Row="0">Deck 3</TextBlock>
-            <TextBlock Grid.Column="3" Grid.Row="0">Deck 4</TextBlock>
-            <TextBox Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck1"></TextBox>
-            <TextBox Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck2"></TextBox>
-            <TextBox Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck3"></TextBox>
-            <TextBox Grid.Column="3" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck4"></TextBox>
-        </Grid>
+        <TabControl BorderThickness="0,1,0,0">
+            <TabItem Header="Decks">
+                <Grid  DockPanel.Dock="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Column="0" Grid.Row="0">Deck 1</TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="0">Deck 2</TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="0">Deck 3</TextBlock>
+                    <TextBlock Grid.Column="3" Grid.Row="0">Deck 4</TextBlock>
+                    <TextBox Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck1"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck2"></TextBox>
+                    <TextBox Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck3"></TextBox>
+                    <TextBox Grid.Column="3" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck4"></TextBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Options">
+                <StackPanel Margin="10">
+                    <CheckBox Name="deckNumbers" IsChecked="True" ToolTip="When enabled, small number denoting to which deck the card belongs to will be placed before each chard name.">Include deck numbers on cards.</CheckBox>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
     </DockPanel>
 </Window>

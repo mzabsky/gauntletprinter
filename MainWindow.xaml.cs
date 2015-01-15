@@ -270,7 +270,10 @@ namespace GauntletPrinter
                             str += @"
                             <tr class=""cardNameRow"">
                                 <td class=" + (deck != decks.FirstOrDefault() ? "cardSeparator" : "") + @">
-                                    <span class=""deckNumber"">" + (j + 1) + @"</span> <span class=""cardName"">" + card.Name + @"</span> <span class=""manaCost"">" + (card.ManaCost != null ? card.ManaCost : "") + @"</span></td>
+                                    " + (this.deckNumbers.IsChecked == true ? @"<span class=""deckNumber"">" + (j + 1) + @"</span> " : "") + @"
+                                    <span class=""cardName"">" + card.Name + @"</span> 
+                                    <span class=""manaCost"">" + (card.ManaCost != null ? card.ManaCost : "") + @"</span>
+                                </td>
                             </tr>
                             <tr class=""cardTypeRow"">
                                 <td><span class=""cardType"">" + card.Type + @"</span> <span class=""powerToughness"">" + (card.Power != null ? card.Power + "/" + card.Toughness : (card.Loyalty != null ? card.Loyalty.ToString() : "")) + @"</span></td>
