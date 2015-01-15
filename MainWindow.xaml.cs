@@ -4,50 +4,15 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace GauntletPrinter
 {
-    public class Card
-    {
-        public string Layout { get; set; }
-        public string Name { get; set; }
-        public string ManaCost { get; set; }
-        public string Type { get; set; }
-        public List<string> Types { get; set; }
-        public List<string> Subtypes { get; set; }
-        public string Text { get; set; }
-        public string Power { get; set; }
-        public string Toughness { get; set; }
-        public string Loyalty { get; set; }
-        public string ImageName { get; set; }
-        public List<string> Names { get; set; }
-
-        public int TextLength { get; set; }
-
-        public bool Processed { get; set; }
-
-        public override string ToString()
-        {
-            return this.Name;
-        }
-    }
-
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
         public MainWindow()
         {
@@ -60,7 +25,7 @@ namespace GauntletPrinter
             {
                 var allCards = JsonConvert.DeserializeObject<Dictionary<string, Card>>(File.ReadAllText("AllCards.json")).Values.ToList();
 
-                List<Card> additionalCards = new List<Card>();
+                var additionalCards = new List<Card>();
 
                 // Split, double faced and flip cards are represented as a separate left and right half in the source data
                 foreach (var leftHalf in allCards.Where(p => p.Layout == "split" && p.Names.FirstOrDefault() == p.Name))
@@ -310,11 +275,11 @@ namespace GauntletPrinter
                                 <td>
                                     " + (this.deckNumbers.IsChecked == true ? @"<span class=""deckNumber"">" + (j + 1) + @"</span> " : "") + @"
                                     <span class=""cardName"">" + card.Name + @"</span> 
-                                    <span class=""manaCost"">" + (card.ManaCost != null ? card.ManaCost : "") + @"</span>
+                                    <span class=""manaCost"">" + (card.ManaCost ?? "") + @"</span>
                                 </td>
                             </tr>
                             <tr class=""cardTypeRow card" + (j + 1) + @""">
-                                <td><span class=""cardType"">" + card.Type + @"</span> <span class=""powerToughness"">" + (card.Power != null ? card.Power + "/" + card.Toughness : (card.Loyalty != null ? card.Loyalty.ToString() : "")) + @"</span></td>
+                                <td><span class=""cardType"">" + card.Type + @"</span> <span class=""powerToughness"">" + (card.Power != null ? card.Power + "/" + card.Toughness : (card.Loyalty ?? "")) + @"</span></td>
                             </tr>";
 
                             /*if (card.Text != null)
@@ -350,12 +315,10 @@ namespace GauntletPrinter
             catch (ApplicationException ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-                return;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-                return;
             }
         }
     }

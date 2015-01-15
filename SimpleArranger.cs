@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GauntletPrinter
 {
@@ -30,8 +27,7 @@ namespace GauntletPrinter
             var orderedData = data.OrderByDescending(p => p.Card.TextLength);
 
             int deckSize = decks[0].Count;
-            Card[,] generatedDecks = new Card[decks.Count, deckSize];
-            int cardIndex = 0;
+            var generatedDecks = new Card[decks.Count, deckSize];
             foreach(var cardInDeck in orderedData)
             {
                 // Find deck slot with the most empty room AND empty slot for the card

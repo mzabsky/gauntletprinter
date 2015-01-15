@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace GauntletPrinter
 {
     public class CardTextShortener
     {
-        private Dictionary<string, string> rules = new Dictionary<string, string> {
+        private readonly Dictionary<string, string> rules = new Dictionary<string, string> {
             {"—", "-"},
             {"−", "-"},
             {"•", "&#9679;"},
@@ -160,48 +155,41 @@ namespace GauntletPrinter
             {"Will of the council - ", ""},            
         };
 
-        private Dictionary<string, MatchEvaluator> advancedRules;
+        private readonly Dictionary<string, MatchEvaluator> advancedRules;
         
         public CardTextShortener()
         {
             advancedRules = new Dictionary<string, MatchEvaluator>
             {
-                { "draw ([0-9]+|X) cards", (m) => "draw " + m.Groups[1].ToString() },
-                { "Draw ([0-9]+|X) cards", (m) => "Draw " + m.Groups[1].ToString() },
-                { "discards ([0-9]+|X) cards", (m) => "discards " + m.Groups[1].ToString() },
-                { "discard ([0-9]+|X) cards", (m) => "discard " + m.Groups[1].ToString() },
-                { "Discard ([0-9]+|X) cards", (m) => "Discard " + m.Groups[1].ToString() },
-                { "gain ([0-9]+|X) life", (m) => "gain " + m.Groups[1].ToString() },
-                { "Gain ([0-9]+|X) life", (m) => "Gain " + m.Groups[1].ToString() },
-                { "gains ([0-9]+|X) life", (m) => "gains " + m.Groups[1].ToString() },
-                { "deals ([0-9]+|X) dmg", (m) => "deals " + m.Groups[1].ToString() },
-                { "prevent the next ([0-9]+|X) dmg", (m) => "prevent next " + m.Groups[1].ToString() },
-                { "Prevent the next ([0-9]+|X) dmg", (m) => "Prevent next " + m.Groups[1].ToString() },
-                { "puts the top ([0-9]+|X) cards of his or her library into his or her graveyard", (m) => "mills " + m.Groups[1].ToString() },
-                { "put the top ([0-9]+|X) cards of your library into your graveyard", (m) => "mill " + m.Groups[1].ToString() },
-                { "reveals cards from the top of his or her library until he or she reveals ([0-9]+|X) land cards, then puts all cards revealed this way into his or her graveyard", (m) => "grinds " + m.Groups[1].ToString() },
-                { "reveals cards from the top of his or her library until ([0-9]+|X) land cards are revealed. That player puts all cards revealed this way into his or her graveyard", (m) => "grinds " + m.Groups[1].ToString() },
-                { "reveal cards from the top of your library until you reveal ([0-9]+|X) land cards, then put all cards revealed this way into your graveyard", (m) => "grind " + m.Groups[1].ToString() },
-                { "Reveal cards from the top of your library until you reveal ([0-9]+|X) land cards, then put all cards revealed this way into your graveyard", (m) => "Grind " + m.Groups[1].ToString() },
-                { "Return (.*) to its owner's hand", (m) => "Bounce " + m.Groups[1].ToString() },
-                { "return (.*) to its owner's hand", (m) => "bounce " + m.Groups[1].ToString() },
-                { "Bloodrush - (.*), Discard [^;]+", (m) => "Bloodrush " + m.Groups[1].ToString()},
-                { "Parley - Each player reveals the top card of his or her library. For each nonland card revealed this way, (.*) Then each player draws a card.", (m) => "Parley - " + m.Groups[1].ToString()},
+                { "draw ([0-9]+|X) cards", m => "draw " + m.Groups[1].ToString() },
+                { "Draw ([0-9]+|X) cards", m => "Draw " + m.Groups[1].ToString() },
+                { "discards ([0-9]+|X) cards", m => "discards " + m.Groups[1].ToString() },
+                { "discard ([0-9]+|X) cards", m => "discard " + m.Groups[1].ToString() },
+                { "Discard ([0-9]+|X) cards", m => "Discard " + m.Groups[1].ToString() },
+                { "gain ([0-9]+|X) life", m => "gain " + m.Groups[1].ToString() },
+                { "Gain ([0-9]+|X) life", m => "Gain " + m.Groups[1].ToString() },
+                { "gains ([0-9]+|X) life", m => "gains " + m.Groups[1].ToString() },
+                { "deals ([0-9]+|X) dmg", m => "deals " + m.Groups[1].ToString() },
+                { "prevent the next ([0-9]+|X) dmg", m => "prevent next " + m.Groups[1].ToString() },
+                { "Prevent the next ([0-9]+|X) dmg", m => "Prevent next " + m.Groups[1].ToString() },
+                { "puts the top ([0-9]+|X) cards of his or her library into his or her graveyard", m => "mills " + m.Groups[1].ToString() },
+                { "put the top ([0-9]+|X) cards of your library into your graveyard", m => "mill " + m.Groups[1].ToString() },
+                { "reveals cards from the top of his or her library until he or she reveals ([0-9]+|X) land cards, then puts all cards revealed this way into his or her graveyard", m => "grinds " + m.Groups[1].ToString() },
+                { "reveals cards from the top of his or her library until ([0-9]+|X) land cards are revealed. That player puts all cards revealed this way into his or her graveyard", m => "grinds " + m.Groups[1].ToString() },
+                { "reveal cards from the top of your library until you reveal ([0-9]+|X) land cards, then put all cards revealed this way into your graveyard", m => "grind " + m.Groups[1].ToString() },
+                { "Reveal cards from the top of your library until you reveal ([0-9]+|X) land cards, then put all cards revealed this way into your graveyard", m => "Grind " + m.Groups[1].ToString() },
+                { "Return (.*) to its owner's hand", m => "Bounce " + m.Groups[1].ToString() },
+                { "return (.*) to its owner's hand", m => "bounce " + m.Groups[1].ToString() },
+                { "Bloodrush - (.*), Discard [^;]+", m => "Bloodrush " + m.Groups[1].ToString()},
+                { "Parley - Each player reveals the top card of his or her library. For each nonland card revealed this way, (.*) Then each player draws a card.", m => "Parley - " + m.Groups[1].ToString()},
                 { "Strive - ~ costs (.*) more to cast for each target beyond the 1st.", (m) => "Strive " + m.Groups[1].ToString()},
-                { "Tempting offer - ([^.]*)\\..*", (m) => "Tempting offer - " + m.Groups[1].ToString() + ". "},
+                { "Tempting offer - ([^.]*)\\..*", m => "Tempting offer - " + m.Groups[1].ToString() + ". "}
             };
         }
 
         private string ReplaceSymbols(string str, bool isGrayscale)
         {
-            if(isGrayscale)
-            {
-                return this.ReplaceSymbolsGrayscale(str);
-            }
-            else
-            {
-                return this.ReplaceSymbolsColored(str);
-            }
+            return isGrayscale ? this.ReplaceSymbolsGrayscale(str) : this.ReplaceSymbolsColored(str);
         }
 
         private string ReplaceSymbolsColored(string str)
