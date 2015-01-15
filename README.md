@@ -14,5 +14,5 @@ These are gauntlets generated with this tool.
 
 **Duel Commander** ([PDF](http://puu.sh/ev5zV/bcd1e22dbd.pdf)) - contains [icecoldjazz's Azusa](http://www.mtgsalvation.com/forums/the-game/commander-edh/forum-1-vs-1-commander-decklists/564451-azusa-lost-but-seeking-aka-ramp-dec), [hakz's Rafiq](http://forums.mtgsalvation.com/showthread.php?t=392838), [Leroy's Grand Arbiter Augustin](http://forums.mtgsalvation.com/showthread.php?t=497498) and [dawN's Exava](http://forums.mtgsalvation.com/showthread.php?t=341982).
 
-[Download](http://puu.sh/evaxj/e969b7a0ed.zip)
+[Download binaries for Windows](http://puu.sh/evaxj/e969b7a0ed.zip)
 -------------------------
