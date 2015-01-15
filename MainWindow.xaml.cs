@@ -87,7 +87,7 @@ namespace GauntletPrinter
                     leftHalf.Name = leftHalf.Name;
                     leftHalf.ManaCost = leftHalf.ManaCost;
                     leftHalf.Type = leftHalf.Type;
-                    leftHalf.Text = "Transforms to " + rightHalf.Name + " [" + rightHalf.Type + ", " + rightHalf.Power + "/" + rightHalf.Toughness + "]; " + leftHalf.Text + "\n // " + (rightHalf.Text != null ? rightHalf.Text.Replace(rightHalf.Name, "~") : "");
+                    leftHalf.Text = "Transforms into " + rightHalf.Name + " [" + rightHalf.Type + ", " + rightHalf.Power + "/" + rightHalf.Toughness + "]; " + leftHalf.Text + "\n // " + (rightHalf.Text != null ? rightHalf.Text.Replace(rightHalf.Name, "~") : "");
                 }
 
                 foreach (var leftHalf in allCards.Where(p => p.Layout == "flip" && p.Names.FirstOrDefault() == p.Name))
