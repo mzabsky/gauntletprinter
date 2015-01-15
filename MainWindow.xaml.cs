@@ -205,6 +205,21 @@ namespace GauntletPrinter
                                 white-space:nowrap;
                             }
 
+                            .deckNumber {
+                                float:left;
+                                margin-right: 1mm;
+                                /*border-radius: 50%;
+
+                                width: 10px;
+                                height: 10px;
+                                padding: 1px;
+
+                                background: #fff;
+                                border: 2px solid #666;
+                                color: #666;
+                                text-align: center;*/
+                            }
+
                             .cardName {
                                 float:left;
                                 font-weight: bold;
@@ -243,8 +258,10 @@ namespace GauntletPrinter
                                 <div>
                                     <table>";
 
-                    foreach (var deck in decks)
+                    for (int j = 0; j < decks.Count; j++ )
                     {
+                        var deck = decks[j];
+
                         if (deck.Count > i)
                         {
                             var card = deck[i];
@@ -252,7 +269,7 @@ namespace GauntletPrinter
                             str += @"
                             <tr class=""cardNameRow"">
                                 <td class=" + (deck != decks.FirstOrDefault() ? "cardSeparator" : "") + @">
-                                    <span class=""cardName"">" + card.Name + @"</span> <span class=""manaCost"">" + (card.ManaCost != null ? card.ManaCost : "") + @"</span></td>
+                                    <span class=""deckNumber"">" + (j + 1) + @"</span> <span class=""cardName"">" + card.Name + @"</span> <span class=""manaCost"">" + (card.ManaCost != null ? card.ManaCost : "") + @"</span></td>
                             </tr>
                             <tr class=""cardTypeRow"">
                                 <td><span class=""cardType"">" + card.Type + @"</span> <span class=""powerToughness"">" + (card.Power != null ? card.Power + "/" + card.Toughness : "") + @"</span></td>
