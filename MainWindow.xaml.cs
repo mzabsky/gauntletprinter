@@ -186,9 +186,11 @@ namespace GauntletPrinter
                             .card > div {
                                 width: 56mm;
                                 height: 82mm;
-                                border: 1px black solid;
-                                margin: 0.5mm;              
-                            }
+                                border: 1px black solid;";
+
+                            if(this.cardSpacing.IsChecked == true) str += @"margin: 0.5mm;";
+
+                            str += @"}
 
                             .card table {
                                 width: 100%;
