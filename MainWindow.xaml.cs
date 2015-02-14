@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Windows.Controls;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -320,6 +321,37 @@ namespace GauntletPrinter
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void GetDeckFromWeb(TextBox textBox)
+        {
+            var dialog = new GetFromWebDialog();
+            if (dialog.ShowDialog() != true)
+            {
+                return;
+            }
+
+
+        }
+
+        private void GetFromWeb1_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.GetDeckFromWeb(this.deck1);
+        }
+
+        private void GetFromWeb2_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.GetDeckFromWeb(this.deck2);
+        }
+
+        private void GetFromWeb3_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.GetDeckFromWeb(this.deck3);
+        }
+
+        private void GetFromWeb4_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.GetDeckFromWeb(this.deck4);
         }
     }
 }
