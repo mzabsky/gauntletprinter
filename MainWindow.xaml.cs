@@ -20,6 +20,29 @@ namespace GauntletPrinter
             InitializeComponent();
         }
 
+        private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            var args = Environment.GetCommandLineArgs();
+            if (args.Length > 1)
+            {
+                var path = args[1];
+                if (File.Exists(path))
+                {
+                    var content = File.ReadAllText(path);
+                    var decks = content.Split(new string[] {"\n\n"}, StringSplitOptions.None);
+                    if (decks.Length > 0) this.deck1.Text = decks[0];
+                    if (decks.Length > 1) this.deck2.Text = decks[1];
+                    if (decks.Length > 2) this.deck3.Text = decks[2];
+                    if (decks.Length > 3) this.deck4.Text = decks[3];
+                    if (decks.Length > 4) this.deck5.Text = decks[4];
+                }
+                else
+                {
+                    MessageBox.Show("Input file \"" + path + "\" not found.");
+                }
+            }
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -74,6 +97,8 @@ namespace GauntletPrinter
                 if (this.deck2.Text != "") deckStrings.Add(this.deck2.Text);
                 if (this.deck3.Text != "") deckStrings.Add(this.deck3.Text);
                 if (this.deck4.Text != "") deckStrings.Add(this.deck4.Text);
+                if (this.deck5.Text != "") deckStrings.Add(this.deck5.Text);
+                //if (this.deck6.Text != "") deckStrings.Add(this.deck6.Text);
             
                 if(deckStrings.Count == 0)
                 {
@@ -119,7 +144,7 @@ namespace GauntletPrinter
 
                     foreach (var card in deck)
                     {
-                        shortener.ProcessCard(card, this.grayscaleSymbols.IsChecked == true);
+                        shortener.ProcessCard(card, this.grayscaleSymbols.IsChecked == true, this.omitTypeLineForBasics.IsChecked == true);
                     }
 
                     decks.Add(deck);
@@ -150,8 +175,8 @@ namespace GauntletPrinter
                             }
 
                             .card > div {
-                                width: 56mm;
-                                height: 82mm;
+                                width: 57mm;
+                                height: 83mm;
                                 border: 1px black solid;";
 
                             if(this.cardSpacing.IsChecked == true) str += @"margin: 0.5mm;";
@@ -271,18 +296,25 @@ namespace GauntletPrinter
                                         <td><hr /></td>
                                     </tr>";
                             }
-                            
+
                             str += @"<tr class=""cardNameRow card" + (j + 1) + @""">
                                 <td>
-                                    " + (this.deckNumbers.IsChecked == true ? @"<span class=""deckNumber"">" + (j + 1) + @"</span> " : "") + @"
+                                    " +
+                                   (this.deckNumbers.IsChecked == true
+                                       ? @"<span class=""deckNumber"">" + (j + 1) + @"</span> "
+                                       : "") + @"
                                     <span class=""cardName"">" + card.Name + @"</span> 
                                     <span class=""manaCost"">" + (card.ManaCost ?? "") + @"</span>
                                 </td>
-                            </tr>
-                            <tr class=""cardTypeRow card" + (j + 1) + @""">
-                                <td><span class=""cardType"">" + card.Type + @"</span> <span class=""powerToughness"">" + (card.Power != null ? card.Power + "/" + card.Toughness : (card.Loyalty ?? "")) + @"</span></td>
                             </tr>";
 
+                            if (!(this.omitTypeLineForBasics.IsChecked == true && card.Type.Contains("Basic")))
+                            {
+                                str += @"<tr class=""cardTypeRow card" + (j + 1) + @""">
+                                <td><span class=""cardType"">" + card.Type + @"</span> <span class=""powerToughness"">" + (card.Power != null ? card.Power + "/" + card.Toughness : (card.Loyalty ?? "")) + @"</span></td>
+                                </tr>";
+                            }
+                            
                             /*if (card.Text != null)
                             {*/
                                 str += @"<tr class=""cardText card" + (j + 1) + @""">
@@ -353,5 +385,15 @@ namespace GauntletPrinter
         {
             this.GetDeckFromWeb(this.deck4);
         }
+
+        private void GetFromWeb5_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.GetDeckFromWeb(this.deck5);
+        }
+
+        /*private void GetFromWeb6_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.GetDeckFromWeb(this.deck6);
+        }*/
     }
 }

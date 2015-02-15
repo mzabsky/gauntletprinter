@@ -37,7 +37,7 @@ namespace GauntletPrinter
                 {
                     if (generatedDecks[cardInDeck.DeckNumber, i] != null) continue;
 
-                    int currentFullness = Enumerable.Range(0, decks.Count).Sum(p => generatedDecks[p, i] != null ? generatedDecks[p, i].TextLength : 0);
+                    int currentFullness = Enumerable.Range(0, decks.Count).Sum(p => generatedDecks[p, i] != null ? (generatedDecks[p, i].TextLength) : 0);
                     if(currentFullness == 0)
                     {
                         foundFullness = 0;

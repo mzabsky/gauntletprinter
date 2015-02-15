@@ -390,7 +390,7 @@ namespace GauntletPrinter
             return str;
         }
 
-        public void ProcessCard(Card card, bool isGrayscale)
+        public void ProcessCard(Card card, bool isGrayscale, bool omitTypeLineForBasics)
         {
             if (card.Text != null && !card.Processed)
             {
@@ -407,6 +407,12 @@ namespace GauntletPrinter
                 }
 
                 card.TextLength = card.Text.Length;
+
+                if (omitTypeLineForBasics && card.Types.Contains("Basic"))
+                {
+                    card.TextLength = -20;
+                }
+
                 card.Processed = true;
 
                 //if (card.Name.Contains("Delver")) Debugger.Break();
