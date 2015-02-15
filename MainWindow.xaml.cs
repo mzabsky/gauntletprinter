@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Net;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using Newtonsoft.Json;
@@ -495,6 +496,40 @@ namespace GauntletPrinter
         private void LoadFromFile5_OnClick(object sender, RoutedEventArgs e)
         {
             this.LoadFromFileWithDialog(4);
+        }
+
+        private async void UpdateCardData_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (
+                MessageBox.Show(
+                    "GauntletPrinter will download latest card data from mtgjson.com. This operation requires internet connection and will download ~5 MB of data. It may take a moment.",
+                    "", MessageBoxButton.OKCancel) != MessageBoxResult.OK)
+            {
+                return;
+            }
+
+            this.IsEnabled = false;
+
+            var client = new WebClient();
+            var requestUri = new Uri("http://mtgjson.com/json/AllCards.json");
+            try
+            {
+                string result = await client.DownloadStringTaskAsync(requestUri);
+
+                File.WriteAllText("AllCards.json", result);
+
+                MessageBox.Show("Card data updated!");
+            }
+            catch (WebException)
+            {
+                MessageBox.Show("Could not download card data from the internet.");
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("Could not save the downloaded data to the hard drive.");
+            }
+
+            this.IsEnabled = true;
         }
     }
 }
