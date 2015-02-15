@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -409,11 +410,12 @@ namespace GauntletPrinter
                     card.Text = Regex.Replace(card.Text, rule.Key, rule.Value);
                 }
 
-                card.TextLength = card.Text.Length;
+                var regex = new Regex("{(.*?)}");
+                card.TextLength = (int)Math.Ceiling(regex.Replace(card.Text, "O").Length / 40.0);
 
                 if (omitTypeLineForBasics && card.Types.Contains("Basic"))
                 {
-                    card.TextLength = -20;
+                    card.TextLength = 0;
                 }
 
                 card.Processed = true;
