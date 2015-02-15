@@ -1,0 +1,456 @@
+﻿1 Azusa, Lost but Seeking
+1 Dryad Arbor
+1 Arbor Elf
+1 Birds of Paradise
+1 Boreal Druid
+1 Elvish Mystic
+1 Fyndhorn Elves
+1 Llanowar Elves
+1 Fauna Shaman
+1 Lotus Cobra
+1 Rofellos, Llanowar Emissary
+1 Tarmogoyf
+1 Voyaging Satyr
+1 Courser of Kruphix
+1 Dosan the Falling Leaf
+1 Elvish Spirit Guide
+1 Eternal Witness
+1 Fierce Empath
+1 Oracle of Mul Daya
+1 Thrun, the Last Troll
+1 Acidic Slime
+1 Vorapede
+1 Primeval Titan
+1 Wurmcoil Engine
+1 Avenger of Zendikar
+1 Hornet Queen
+1 Regal Force
+1 Craterhoof Behemoth
+1 Artisan of Kozilek
+1 Kozilek, Butcher of Truth
+1 Emrakul, the Aeons Torn
+1 Expedition Map
+1 Birthing Pod
+1 Coercive Portal
+1 Memory Jar
+1 Crop Rotation
+1 Worldly Tutor
+1 Beast Within
+1 Chord of Calling
+1 Realms Uncharted
+1 Green Sun's Zenith
+1 Sylvan Tutor
+1 Life from the Loam
+1 Regrowth
+1 Sylvan Scrying
+1 Genesis Wave
+1 Harmonize
+1 Rude Awakening
+1 Tooth and Nail
+1 Praetor's Counsel
+1 Exploration
+1 Survival of the Fittest
+1 Sylvan Library
+1 Hall of Gemstone
+1 Garruk Wildspeaker
+1 Garruk, Primal Hunter
+1 Nissa, Worldwaker
+1 Garruk, Caller of Beasts
+1 Bazaar of Baghdad
+1 Buried Ruin
+1 Cavern of Souls
+1 City of Traitors
+1 Dark Depths
+1 Deserted Temple
+1 Dust Bowl
+1 Eye of Ugin
+20 Forest
+1 Gaea's Cradle
+1 Gemstone Caverns
+1 Khalni Garden
+1 Misty Rainforest
+1 Nykthos, Shrine to Nyx
+1 Petrified Field
+1 Tectonic Edge
+1 Temple of the False God
+1 Thespian's Stage
+1 Verdant Catacombs
+1 Vesuva
+1 Wasteland
+1 Windswept Heath
+1 Wooded Foothills
+
+1 Forest
+1 Forest
+1 Forest
+1 Island
+1 Island
+1 Plains
+1 Plains
+1 Vesuva
+1 Vesuva
+1 Dryad Arbor
+1 Hinterland Harbor
+1 Inkmoth Nexus
+1 Breeding Pool
+1 Hallowed Fountain
+1 Temple Garden
+1 Flooded Strand
+1 Windswept Heath
+1 Yavimaya Coast
+1 Sejiri Steppe
+1 Adarkar Wastes
+1 Brushland
+1 City of Brass
+1 Savannah
+1 Tropical Island
+1 Tundra
+1 Mystic Gate
+1 Wooded Bastion
+1 Flooded Grove
+1 Seaside Citadel
+1 Glacial Fortress
+1 Sunpetal Grove
+1 Misty Rainforest
+1 Seachrome Coast
+1 Razorverge Thicket
+1 Command Tower
+1 Harabaz Druid
+1 Birds of Paradise
+1 Cephalid Constable
+1 Gemhide Sliver
+1 Utopia Tree
+1 Llanowar Elves
+1 Noble Hierarch
+1 Qasali Pridemage
+1 Ichorclaw Myr
+1 Blight Mamba
+1 Putrefax
+1 Necropede
+1 Plague Myr
+1 Rot Wolf
+1 Lost Leonin
+1 Blighted Agent
+1 Glistener Elf
+1 Avacyn's Pilgrim
+1 Mother of Runes
+1 Edge of Autumn
+1 Search for Tomorrow
+1 Wargate
+1 Day of Judgment
+1 Distortion Strike
+1 Green Sun's Zenith
+1 Triumph of the Hordes
+1 Invigorate
+1 Negate
+1 Mystical Tutor
+1 Enlightened Tutor
+1 Swords to Plowshares
+1 Mutagenic Growth
+1 Condescend
+1 Shelter
+1 Harrow
+1 Wild Might
+1 Crop Rotation
+1 Might of Oaks
+1 Bounty of the Hunt
+1 Giant Growth
+1 Bant Charm
+1 Vines of Vastwood
+1 Groundswell
+1 Emerge Unscathed
+1 Journey to Nowhere
+1 Utopia Sprawl
+1 Oblivion Ring
+1 Prison Term
+1 Seal of Strength
+1 Rancor
+1 Ward of Lights
+1 Finest Hour
+1 Spirit Mantle
+1 Azorius Signet
+1 Simic Signet
+1 Selesnya Signet
+1 Grafted Wargear
+1 Livewire Lash
+1 Bonesplitter
+1 Chrome Mox
+1 Loxodon Warhammer
+1 Talisman of Progress
+1 Talisman of Unity
+1 Lotus Petal
+1 Rafiq of the Many
+
+1 Chrome Mox
+1 Azorius Signet
+1 Coldsteel Heart
+1 Fellwar Stone
+1 Grim Monolith
+1 Guardian Idol
+1 Marble Diamond
+1 Mind Stone
+1 Sapphire Medallion
+1 Sky Diamond
+1 Talisman of Progress
+1 Winter Orb
+1 Fieldmist Borderpost
+1 Snapcaster Mage
+1 Consecrated Sphinx
+1 Seal of Cleansing
+1 Detention Sphere
+1 Oblivion Ring
+1 Rhystic Study
+1 Rising Waters
+1 Humility
+1 Future Sight
+1 Daze
+1 Force of Will
+1 Condescend
+1 Enlightened Tutor
+1 Force Spike
+1 Mana Tithe
+1 Mystical Tutor
+1 Path to Exile
+1 Spell Pierce
+1 Spell Snare
+1 Swords to Plowshares
+1 Counterspell
+1 Cyclonic Rift
+1 Disenchant
+1 Into the Roil
+1 Mana Leak
+1 Memory Lapse
+1 Miscalculation
+1 Negate
+1 Remand
+1 Think Twice
+1 Dismantling Blow
+1 Rushing River
+1 Sphinx's Revelation
+1 Thirst for Knowledge
+1 Careful Consideration
+1 Cryptic Command
+1 Dismiss
+1 Fact or Fiction
+1 Gitaxian Probe
+1 Ancestral Vision
+1 Oust
+1 Preordain
+1 Transmute Artifact
+1 Day of Judgment
+1 Deep Analysis
+1 Supreme Verdict
+1 Wrath of God
+1 Jace Beleren
+1 Jace, the Mind Sculptor
+1 Gideon Jura
+1 Tezzeret the Seeker
+7 Island
+5 Plains
+1 Tundra
+1 Arid Mesa
+1 Flooded Strand
+1 Marsh Flats
+1 Misty Rainforest
+1 Polluted Delta
+1 Scalding Tarn
+1 Windswept Heath
+1 Adarkar Wastes
+1 Azorius Chancery
+1 Celestial Colonnade
+1 City of Brass
+1 Glacial Fortress
+1 Lonely Sandbar
+1 Secluded Steppe
+1 Oboro, Palace in the Clouds
+1 Undiscovered Paradise
+1 Ancient Den
+1 Seat of the Synod
+1 Cavern of Souls
+1 Cephalid Coliseum
+1 City of Traitors
+1 Wasteland
+1 Grand Arbiter Augustin IV
+
+1 Command Tower
+1 Urborg, Tomb of Yawgmoth
+1 Rix Maadi, Dungeon Palace
+1 Wasteland
+1 Arid Mesa
+1 Bloodstained Mire
+1 Marsh Flats
+1 Polluted Delta
+1 Scalding Tarn
+1 Verdant Catacombs
+1 Wooded Foothills
+1 Blood Crypt
+1 Badlands
+1 Dragonskull Summit
+1 Blackcleave Cliffs
+1 Graven Cairns
+1 Tainted Peak
+1 Shadowblood Ridge
+1 Sulfurous Springs
+1 Lavaclaw Reaches
+10 Swamp
+11 Mountain
+1 Skeletal Scrying
+1 Burst Lightning
+1 Flame Slash
+1 Red Elemental Blast
+1 Lightning Bolt
+1 Terminate
+1 Go for the Throat
+1 Rakdos Charm
+1 Victim of Night
+1 Smash to Smithereens
+1 Chaos Warp
+1 Dismember
+1 Char
+1 Reanimate
+1 Inquisition of Kozilek
+1 Duress
+1 Thoughtseize
+1 Chain Lightning
+1 Mizzium Mortars
+1 Sign in Blood
+1 Night's Whisper
+1 Hymn to Tourach
+1 Demonic Tutor
+1 Dreadbore
+1 Blightning
+1 Seal of Fire
+1 Bitterblossom
+1 Phyrexian Arena
+1 Sulfuric Vortex
+1 Chrome Mox
+1 Mox Diamond
+1 Skullclamp
+1 Tangle Wire
+1 Sword of Feast and Famine
+1 Rakdos Cackler
+1 Carrion Feeder
+1 Blood Scrivener
+1 Stormblood Berserker
+1 Dark Confidant
+1 Bloodghast
+1 Slavering Nulls
+1 Stingscourger
+1 Mesmeric Fiend
+1 Dwarven Miner
+1 Dwarven Blastminer
+1 Crimson Muckwader
+1 Phyrexian Revoker
+1 Torch Fiend
+1 Rakdos Augermage
+1 Gore-House Chainwalker
+1 Hypnotic Specter
+1 Magus of the Moon
+1 Graveborn Muse
+1 Falkenrath Aristocrat
+1 Flametongue Kavu
+1 Savage Firecat
+1 Liliana of the Veil
+1 Chandra, Pyromaster
+1 Exava, Rakdos Blood Witch
+
+1 Marath, Will of the Wild
+1 Dryad Arbor
+1 Arbor Elf
+1 Avacyn's Pilgrim
+1 Birds of Paradise
+1 Elvish Mystic
+1 Fyndhorn Elves
+1 Llanowar Elves
+1 Weathered Wayfarer
+1 Bloom Tender
+1 Gyre Sage
+1 Lotus Cobra
+1 Sakura-Tribe Elder
+1 Sylvan Caryatid
+1 Scavenging Ooze
+1 Fauna Shaman
+1 Gaddock Teeg
+1 Nightshade Peddler
+1 Stoneforge Mystic
+1 Voice of Resurgence
+1 Aven Mindcensor
+1 Brimaz, King of Oreskos
+1 Courser of Kruphix
+1 Eternal Witness
+1 Fiend Hunter
+1 Harmonic Sliver
+1 Imperial Recruiter
+1 Knight of the Reliquary
+1 Mentor of the Meek
+1 Spike Feeder
+1 Wood Elves
+1 Bloodbraid Elf
+1 Flametongue Kavu
+1 Linvala, Keeper of Silence
+1 Oracle of Mul Daya
+1 Purphoros, God of the Forge
+1 Restoration Angel
+1 Acidic Slime
+1 Archangel of Thune
+1 Karmic Guide
+1 Kiki-Jiki, Mirror Breaker
+1 Reveillark
+1 Zealous Conscripts
+1 Primeval Titan
+1 Fiery Justice
+1 Green Sun's Zenith
+1 Chord of Calling
+1 Eladamri's Call
+1 Enlightened Tutor
+1 Nature's Claim
+1 Path to Exile
+1 Swords to Plowshares
+1 Aura Shards
+1 Earthcraft
+1 Survival of the Fittest
+1 Basilisk Collar
+1 Birthing Pod
+1 Skullclamp
+1 Domri Rade
+1 Garruk Wildspeaker
+1 Garruk, Caller of Beasts
+1 Xenagos, the Reveler
+1 Snow-Covered Forest
+1 Snow-Covered Mountain
+1 Snow-Covered Plains
+1 Plateau
+1 Sacred Foundry
+1 Savannah
+1 Stomping Ground
+1 Taiga
+1 Temple Garden
+1 Arid Mesa
+1 Bloodstained Mire
+1 Flooded Strand
+1 Marsh Flats
+1 Misty Rainforest
+1 Scalding Tarn
+1 Verdant Catacombs
+1 Windswept Heath
+1 Wooded Foothills
+1 Battlefield Forge
+1 Brushland
+1 Cavern of Souls
+1 City of Brass
+1 Clifftop Retreat
+1 Command Tower
+1 Copperline Gorge
+1 Fire-Lit Thicket
+1 Gaea's Cradle
+1 Horizon Canopy
+1 Karplusan Forest
+1 Raging Ravine
+1 Razorverge Thicket
+1 Rootbound Crag
+1 Rugged Prairie
+1 Stirring Wildwood
+1 Sunpetal Grove
+1 Gavony Township
+1 Kessig Wolf Run
+1 Wasteland

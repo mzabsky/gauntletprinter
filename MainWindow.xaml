@@ -47,7 +47,7 @@
                     <CheckBox Name="deckNumbers" IsChecked="True" ToolTip="When enabled, small number denoting to which deck the card belongs to will be placed before each chard name." Margin="3">Include deck numbers on cards.</CheckBox>
                     <CheckBox Name="colorCode" IsChecked="False" ToolTip="When enabled, a narrow strip highlighting to which deck the card belongs to will be added to each card." Margin="3">Include deck identification color strip (requires color printing).</CheckBox>
                     <CheckBox Name="cardSpacing" IsChecked="True" ToolTip="When enabled, the proxies will be spaced so that their borders don't meet." Margin="3">Add space between proxies.</CheckBox>
-                    <CheckBox Name="omitTypeLineForBasics" IsChecked="False" ToolTip="When enabled, basic lands won't have the type line saying 'Basic Land - X'." Margin="3">Omit type line for basic lands.</CheckBox>
+                    <CheckBox Name="omitTypeLineForBasics" IsChecked="True" ToolTip="When enabled, basic lands won't have the type line saying 'Basic Land - X'." Margin="3">Omit type line for basic lands.</CheckBox>
                 </StackPanel>
             </TabItem>
         </TabControl>
