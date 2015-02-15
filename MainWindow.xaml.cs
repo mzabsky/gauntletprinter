@@ -186,7 +186,7 @@ namespace GauntletPrinter
                             .card table {
                                 width: 100%;
                                 height: 100%;
-                                font-size: 3mm;
+                                font-size: 3mm; /*11px;*/
                                 padding: 0; 
                                 border-spacing: 0;
                             }";

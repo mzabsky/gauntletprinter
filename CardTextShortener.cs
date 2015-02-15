@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using Size = System.Windows.Size;
 
 namespace GauntletPrinter
 {
@@ -423,8 +426,26 @@ namespace GauntletPrinter
                     card.Text = Regex.Replace(card.Text, rule.Key, rule.Value);
                 }
 
-                var regex = new Regex("{(.*?)}");
-                card.TextLength = (int)Math.Ceiling(regex.Replace(card.Text, "O").Length / 40.0);
+                /*if (omitTypeLineForBasics && card.Types.Contains("Basic"))
+                {
+                    card.TextLength = 0; // Title
+                }
+                else if (card.Text.Length == 0)
+                {
+                    card.TextLength = 14; // Title + type line 
+                }
+                else
+                {
+                    var regex = new Regex("{(.*?)}");
+                    Font font = new Font("Arial", 8);
+                    System.Drawing.Size textSize = TextRenderer.MeasureText(regex.Replace(card.Text, "O"), font, new System.Drawing.Size(210, 999), TextFormatFlags.WordBreak | TextFormatFlags.NoPadding | TextFormatFlags.Left);
+
+                    card.TextLength = 14 + textSize.Height; // Title + type line + rules text
+                }
+
+                card.ManaCost += " " + card.TextLength;*/
+
+                card.TextLength = (int)Math.Ceiling(card.Text.Length / 40.0);
 
                 if (omitTypeLineForBasics && card.Types.Contains("Basic"))
                 {
