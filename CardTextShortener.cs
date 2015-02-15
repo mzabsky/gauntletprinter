@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace GauntletPrinter
@@ -214,8 +215,16 @@ namespace GauntletPrinter
 
         private readonly Dictionary<string, MatchEvaluator> advancedRules;
         
+        // This is in string form so that it can be easily copied from MTG rules.
+        private readonly string subtypes =
+            "Contraption, Equipment, Fortification, Aura, Curse, and Shrine, Desert, Forest, Island, Lair, Locus, Mine, Mountain, Plains, Power-Plant, Swamp, Tower, Urza's, Ajani, Ashiok, Bolas, Chandra, Dack, Domri, Elspeth, Garruk, Gideon, Jace, Karn, Kiora, Koth, Liliana, Nissa, Ral, Sarkhan, Sorin, Tamiyo, Tezzeret, Tibalt, Venser, Vraska, Xenagos, Arcane, Trap, Advisor, Ally, Angel, Anteater, Antelope, Ape, Archer, Archon, Artificer, Assassin, Assembly-Worker, Atog, Aurochs, Avatar, Badger, Barbarian, Basilisk, Bat, Bear, Beast, Beeble, Berserker, Bird, Blinkmoth, Boar, Bringer, Brushwagg, Camarid, Camel, Caribou, Carrier, Cat, Centaur, Cephalid, Chimera, Citizen, Cleric, Cockatrice, Construct, Coward, Crab, Crocodile, Cyclops, Dauthi, Demon, Deserter, Devil, Djinn, Dragon, Drake, Dreadnought, Drone, Druid, Dryad, Dwarf, Efreet, Elder, Eldrazi, Elemental, Elephant, Elf, Elk, Eye, Faerie, Ferret, Fish, Flagbearer, Fox, Frog, Fungus, Gargoyle, Germ, Giant, Gnome, Goat, Goblin, God, Golem, Gorgon, Graveborn, Gremlin, Griffin, Hag, Harpy, Hellion, Hippo, Hippogriff, Homarid, Homunculus, Horror, Horse, Hound, Human, Hydra, Hyena, Illusion, Imp, Incarnation, Insect, Jellyfish, Juggernaut, Kavu, Kirin, Kithkin, Knight, Kobold, Kor, Kraken, Lamia, Lammasu, Leech, Leviathan, Lhurgoyf, Licid, Lizard, Manticore, Masticore, Mercenary, Merfolk, Metathran, Minion, Minotaur, Monger, Mongoose, Monk, Moonfolk, Mutant, Myr, Mystic, Naga, Nautilus, Nephilim, Nightmare, Nightstalker, Ninja, Noggle, Nomad, Nymph, Octopus, Ogre, Ooze, Orb, Orc, Orgg, Ouphe, Ox, Oyster, Pegasus, Pentavite, Pest, Phelddagrif, Phoenix, Pincher, Pirate, Plant, Praetor, Prism, Rabbit, Rat, Rebel, Reflection, Rhino, Rigger, Rogue, Sable, Salamander, Samurai, Sand, Saproling, Satyr, Scarecrow, Scorpion, Scout, Serf, Serpent, Shade, Shaman, Shapeshifter, Sheep, Siren, Skeleton, Slith, Sliver, Slug, Snake, Soldier, Soltari, Spawn, Specter, Spellshaper, Sphinx, Spider, Spike, Spirit, Splinter, Sponge, Squid, Squirrel, Starfish, Surrakar, Survivor, Tetravite, Thalakos, Thopter, Thrull, Treefolk, Triskelavite, Troll, Turtle, Unicorn, Vampire, Vedalken, Viashino, Volver, Wall, Warrior, Weird, Werewolf, Whale, Wizard, Wolf, Wolverine, Wombat, Worm, Wraith, Wurm, Yeti, Zombie, and Zubera";
+
+        private List<string> parsedSubtypes;
+
         public CardTextShortener()
         {
+            parsedSubtypes = this.subtypes.Split(',').Select(p => p.Trim()).ToList();
+            
             advancedRules = new Dictionary<string, MatchEvaluator>
             {
                 { "draw ([0-9]+|X) cards", m => "draw " + m.Groups[1].ToString() },
@@ -251,8 +260,8 @@ namespace GauntletPrinter
                 { "up to ([0-9]+|X)", m => "<= " + m.Groups[1].ToString() },
                 { "more than ([0-9]+|X)", m => "> " + m.Groups[1].ToString() },
                 { "less than ([0-9]+|X)", m => "< " + m.Groups[1].ToString() },
-                { "(?!Draw)([A-Z]\\w+) cards", m => m.Groups[1].ToString() + "s" }, // capital to match only type names
-                { "([A-Z]\\w+) card", m => m.Groups[1].ToString() }
+                { "([A-Z]\\w+) cards", m => parsedSubtypes.Contains(m.Groups[1].ToString()) ? m.Groups[1].ToString() + "s" : m.Groups[1].ToString() + " cards"}, // These two rules need to be careful, because incorrect string could be matched (eg. "Draw cards equal to...")
+                { "([A-Z]\\w+) card", m => parsedSubtypes.Contains(m.Groups[1].ToString()) ? m.Groups[1].ToString() : m.Groups[1].ToString() + " card" }
             };
         }
 

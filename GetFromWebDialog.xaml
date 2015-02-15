@@ -1,0 +1,14 @@
+﻿<Window x:Class="GauntletPrinter.GetFromWebDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Get deck from web" Height="300" Width="300">
+    <Grid>
+        <StackPanel Margin="5">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Left" Margin="3">Deck URL: </TextBlock>
+                <TextBox DockPanel.Dock="Left" Margin="3" Name="deckUrl"></TextBox>
+            </DockPanel>
+            <Button Margin="3" Name="download" Click="Download_OnClick">Download</Button>
+        </StackPanel>
+    </Grid>
+</Window>
