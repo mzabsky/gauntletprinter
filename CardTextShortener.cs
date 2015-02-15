@@ -28,6 +28,7 @@ namespace GauntletPrinter
             {"enter the battlefield", "ETB"},
             {"graveyard", "GY"},
             {"mana pool", "MP"},
+            {"counters on it", "counters"},
             {"\\+1/\\+1 counters", "{+1/+1}"},//
             {"\\+1/\\+1 counter", "{+1/+1}"},
             {"\\-1/\\-1 counters", "{-1/-1}"},
@@ -182,6 +183,10 @@ namespace GauntletPrinter
             {"^;", ""},
             {"^ ;", ""},
             {" ;", ";"},
+            {"Soulbond; As long as ~ is paired with another creature, both creatures have ", "Soulbond - "},
+            {"Soulbond; As long as ~ is paired with another creature, both creatures get ", "Soulbond - "},
+            {"Soulbond; As long as ~ is paired with another creature, each of those creatures gets ", "Soulbond - "},
+            {"Soulbond; As long as ~ is paired with another creature, each of those creatures has ", "Soulbond - "},
 
             // Ability words
             {"Ferocious - ", ""},
