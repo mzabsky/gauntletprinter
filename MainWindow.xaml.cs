@@ -43,6 +43,8 @@ namespace GauntletPrinter
                         this.deckInputs[deckNumber + i].Text = decks[i];
                     }
                 }
+
+                this.generate.Focus();
             }
             else
             {
