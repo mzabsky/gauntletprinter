@@ -400,6 +400,14 @@ namespace GauntletPrinter
             {
                 card.Text = card.Text.Replace(card.Name, "~");
 
+                // The card can refer to itself with partial name (eg. Purphoros instead of Purphoros, God of the Forge)
+                if (card.Name.Contains(","))
+                {
+                    var shortName =
+                        card.Name.Substring(0, card.Name.IndexOf(",", System.StringComparison.Ordinal)).Trim();
+                    card.Text = card.Text.Replace(shortName, "~");
+                }
+
                 foreach (var rule in rules)
                 {
                     card.Text = Regex.Replace(card.Text, rule.Key, rule.Value);
