@@ -18,6 +18,7 @@ namespace GauntletPrinter
     public partial class MainWindow
     {
         private List<TextBox> deckInputs = new List<TextBox>();
+        private List<TextBox> sideboardInputs = new List<TextBox>();
 
         public MainWindow()
         {
@@ -28,6 +29,12 @@ namespace GauntletPrinter
             this.deckInputs.Add(this.deck3);
             this.deckInputs.Add(this.deck4);
             this.deckInputs.Add(this.deck5);
+
+            this.sideboardInputs.Add(this.sideboard1);
+            this.sideboardInputs.Add(this.sideboard2);
+            this.sideboardInputs.Add(this.sideboard3);
+            this.sideboardInputs.Add(this.sideboard4);
+            this.sideboardInputs.Add(this.sideboard5);
         }
 
         private void LoadFromFile(string path, int deckNumber)
@@ -40,7 +47,21 @@ namespace GauntletPrinter
                 {
                     if (deckNumber + i < deckInputs.Count)
                     {
-                        this.deckInputs[deckNumber + i].Text = decks[i];
+                        var deckString = decks[i].Trim();
+                        
+                        var a = deckString.LastIndexOf("\n\r", System.StringComparison.Ordinal);
+                        var b = deckString.LastIndexOf("\n\n", System.StringComparison.Ordinal);
+                        //var c = deckString.LastIndexOf("\r\n", System.StringComparison.Ordinal);
+                        
+                        var sideboardSeparatorPosition = Math.Max(
+                            deckString.LastIndexOf("\n\r", System.StringComparison.Ordinal),
+                            deckString.LastIndexOf("\n\n", System.StringComparison.Ordinal));
+
+                        this.deckInputs[deckNumber + i].Text = deckString.Substring(0, sideboardSeparatorPosition).Trim();
+                        if (sideboardSeparatorPosition != -1)
+                        {
+                            this.sideboardInputs[deckNumber + i].Text = deckString.Substring(sideboardSeparatorPosition + 1).Trim();
+                        }
                     }
                 }
 
@@ -120,62 +141,27 @@ namespace GauntletPrinter
 
                 allCards.AddRange(additionalCards);
 
-                var deckStrings = new List<string>();
-                if (this.deck1.Text != "") deckStrings.Add(this.deck1.Text);
-                if (this.deck2.Text != "") deckStrings.Add(this.deck2.Text);
-                if (this.deck3.Text != "") deckStrings.Add(this.deck3.Text);
-                if (this.deck4.Text != "") deckStrings.Add(this.deck4.Text);
-                if (this.deck5.Text != "") deckStrings.Add(this.deck5.Text);
-                //if (this.deck6.Text != "") deckStrings.Add(this.deck6.Text);
-            
-                if(deckStrings.Count == 0)
-                {
-                    MessageBox.Show("You have to enter at least one deck.");
-                    return;
-                }
-
                 // Parse the deck strings and shorten the text of cards that are included in one or more decks
                 var shortener = new CardTextShortener();
                 var decks = new List<List<Card>>();
-                foreach (var deckString in deckStrings)
+                var sideboards = new List<List<Card>>();
+                for (int deckNumber = 0; deckNumber < this.deckInputs.Count; deckNumber++)
                 {
-                    var deck = new List<Card>();
-
-                    var match = Regex.Match(deckString, @"\s*(\s*(?<count>\d*)(?<card>.*))*");
-
-                    for (int i = 0; i < match.Groups["card"].Captures.Count; i++)
+                    if (this.deckInputs[deckNumber].Text.Trim().Length == 0)
                     {
-                        var name = match.Groups["card"].Captures[i].ToString().Trim();
-
-                        if (name == "")
-                        {
-                            continue;
-                        }
-
-                        var countString = match.Groups["count"].Captures[i].ToString() == "" ? "1" : match.Groups["count"].Captures[i].ToString().Trim();
-                        var count = int.Parse(countString);
-
-                        for (int j = 0; j < count; j++)
-                        {
-                            var foundCard = allCards.SingleOrDefault(p => p.Name.Equals(name, StringComparison.InvariantCultureIgnoreCase));
-
-                            if (foundCard == null)
-                            {
-                                throw new ApplicationException("Card \"" + name + "\" not found.");
-                            }
-                            else
-                            {
-                                deck.Add(foundCard);
-                            }
-                        }
+                        continue;
                     }
 
-                    foreach (var card in deck)
+                    var deck = ParseDeckString(this.deckInputs[deckNumber].Text, allCards);
+                    var sideboard = ParseDeckString(this.sideboardInputs[deckNumber].Text, allCards);
+
+                    foreach (var card in deck.Concat(sideboard))
                     {
                         shortener.ProcessCard(card, this.grayscaleSymbols.IsChecked == true, this.omitTypeLineForBasics.IsChecked == true);
                     }
 
                     decks.Add(deck);
+                    sideboards.Add(sideboard);
                 }
 
                 // Validate sizes of the decks
@@ -187,9 +173,19 @@ namespace GauntletPrinter
                     throw new ApplicationException("All decks must contain the same number of cards (deck 1 contains " + decks[0].Count + " cards, deck " + (numberOfValidDecks + 1) + " contains " + invalidDeck.Count + " cards.)");
                 }
 
+                // Validate sizes of the sideboards
+                if (sideboards.Any(p => p.Count != sideboards[0].Count))
+                {
+                    var numberOfValidDecks = sideboards.TakeWhile(p => p.Count == sideboards[0].Count).Count();
+                    var invalidDeck = sideboards.First(p => p.Count != sideboards[0].Count);
+
+                    throw new ApplicationException("All sideboards must contain the same number of cards (sideboard 1 contains " + sideboards[0].Count + " cards, sideboard " + (numberOfValidDecks + 1) + " contains " + invalidDeck.Count + " cards.)");
+                }
+
                 // Format the decks into HTML
                 var arranger = new SimpleArranger();
                 decks = arranger.ArrangeCards(decks);
+                sideboards = arranger.ArrangeCards(sideboards);
 
                 string str = @"
                 <html>
@@ -302,7 +298,7 @@ namespace GauntletPrinter
                     <body>                
                 ";
 
-                var deckSize = decks.Max(p => p.Count);
+                var deckSize = decks.Max(p => p.Count) + sideboards.Max(p => p.Count);
                 for (var i = 0; i < deckSize; i++)
                 {
                     str += @"<div class=""card"">
@@ -311,7 +307,7 @@ namespace GauntletPrinter
 
                     for (int j = 0; j < decks.Count; j++ )
                     {
-                        var deck = decks[j];
+                        var deck = decks[j].Concat(sideboards[j]).ToList();
 
                         if (deck.Count > i)
                         {
@@ -383,6 +379,44 @@ namespace GauntletPrinter
             }
         }
 
+        private static List<Card> ParseDeckString(string deckString, List<Card> allCards)
+        {
+            var deck = new List<Card>();
+
+            var deckMatch = Regex.Match(deckString, @"\s*(\s*(?<count>\d*)(?<card>.*))*");
+
+            for (int i = 0; i < deckMatch.Groups["card"].Captures.Count; i++)
+            {
+                var name = deckMatch.Groups["card"].Captures[i].ToString().Trim();
+
+                if (name == "")
+                {
+                    continue;
+                }
+
+                var countString = deckMatch.Groups["count"].Captures[i].ToString() == ""
+                    ? "1"
+                    : deckMatch.Groups["count"].Captures[i].ToString().Trim();
+                var count = int.Parse(countString);
+
+                for (int j = 0; j < count; j++)
+                {
+                    var foundCard =
+                        allCards.SingleOrDefault(p => p.Name.Equals(name, StringComparison.InvariantCultureIgnoreCase));
+
+                    if (foundCard == null)
+                    {
+                        throw new ApplicationException("Card \"" + name + "\" not found.");
+                    }
+                    else
+                    {
+                        deck.Add(foundCard);
+                    }
+                }
+            }
+            return deck;
+        }
+
         private void GetDeckFromWeb(TextBox textBox)
         {
             var dialog = new GetFromWebDialog();
@@ -390,8 +424,6 @@ namespace GauntletPrinter
             {
                 return;
             }
-
-
         }
 
         private void GetFromWeb1_OnClick(object sender, RoutedEventArgs e)

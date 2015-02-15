@@ -18,32 +18,44 @@
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="2*"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
                         <RowDefinition></RowDefinition>
-                        <RowDefinition Height="20"></RowDefinition>
-                        <RowDefinition Height="20"></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Column="0" Grid.Row="0">Deck 1</TextBlock>
-                    <TextBlock Grid.Column="1" Grid.Row="0">Deck 2</TextBlock>
-                    <TextBlock Grid.Column="2" Grid.Row="0">Deck 3</TextBlock>
-                    <TextBlock Grid.Column="3" Grid.Row="0">Deck 4</TextBlock>
-                    <TextBlock Grid.Column="4" Grid.Row="0">Deck 5</TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold">Deck 1</TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold">Deck 2</TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold">Deck 3</TextBlock>
+                    <TextBlock Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold">Deck 4</TextBlock>
+                    <TextBlock Grid.Column="4" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold">Deck 5</TextBlock>
+                    <Button Grid.Column="0" Grid.Row="1" Name="loadFromFile1" Click="LoadFromFile1_OnClick">Load from file</Button>
+                    <Button Grid.Column="1" Grid.Row="1" Name="loadFromFile2" Click="LoadFromFile2_OnClick">Load from file</Button>
+                    <Button Grid.Column="2" Grid.Row="1" Name="loadFromFile3" Click="LoadFromFile3_OnClick">Load from file</Button>
+                    <Button Grid.Column="3" Grid.Row="1" Name="loadFromFile4" Click="LoadFromFile4_OnClick">Load from file</Button>
+                    <Button Grid.Column="4" Grid.Row="1" Name="loadFromFile5" Click="LoadFromFile5_OnClick">Load from file</Button>
+                    <Button Grid.Column="0" Grid.Row="2" Name="getFromWeb1" Click="GetFromWeb1_OnClick">Get from web</Button>
+                    <Button Grid.Column="1" Grid.Row="2" Name="getFromWeb2" Click="GetFromWeb2_OnClick">Get from web</Button>
+                    <Button Grid.Column="2" Grid.Row="2" Name="getFromWeb3" Click="GetFromWeb3_OnClick">Get from web</Button>
+                    <Button Grid.Column="3" Grid.Row="2" Name="getFromWeb4" Click="GetFromWeb4_OnClick">Get from web</Button>
+                    <Button Grid.Column="4" Grid.Row="2" Name="getFromWeb5" Click="GetFromWeb5_OnClick">Get from web</Button>
                     <!--<TextBlock Grid.Column="5" Grid.Row="0">Deck 6</TextBlock>-->
-                    <TextBox Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck1"></TextBox>
-                    <TextBox Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck2"></TextBox>
-                    <TextBox Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck3"></TextBox>
-                    <TextBox Grid.Column="3" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck4"></TextBox>
-                    <TextBox Grid.Column="4" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck5"></TextBox>
+                    <TextBox Grid.Column="0" Grid.Row="3" TextWrapping="Wrap" AcceptsReturn="True" Name="deck1"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="3" TextWrapping="Wrap" AcceptsReturn="True" Name="deck2"></TextBox>
+                    <TextBox Grid.Column="2" Grid.Row="3" TextWrapping="Wrap" AcceptsReturn="True" Name="deck3"></TextBox>
+                    <TextBox Grid.Column="3" Grid.Row="3" TextWrapping="Wrap" AcceptsReturn="True" Name="deck4"></TextBox>
+                    <TextBox Grid.Column="4" Grid.Row="3" TextWrapping="Wrap" AcceptsReturn="True" Name="deck5"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold">Sideboard 1</TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold">Sideboard 2</TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold">Sideboard 3</TextBlock>
+                    <TextBlock Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold">Sideboard 4</TextBlock>
+                    <TextBlock Grid.Column="4" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold">Sideboard 5</TextBlock>
+                    <TextBox Grid.Column="0" Grid.Row="5" TextWrapping="Wrap" AcceptsReturn="True" Name="sideboard1"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="5" TextWrapping="Wrap" AcceptsReturn="True" Name="sideboard2"></TextBox>
+                    <TextBox Grid.Column="2" Grid.Row="5" TextWrapping="Wrap" AcceptsReturn="True" Name="sideboard3"></TextBox>
+                    <TextBox Grid.Column="3" Grid.Row="5" TextWrapping="Wrap" AcceptsReturn="True" Name="sideboard4"></TextBox>
+                    <TextBox Grid.Column="4" Grid.Row="5" TextWrapping="Wrap" AcceptsReturn="True" Name="sideboard5"></TextBox>
                     <!--<TextBox Grid.Column="5" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck6"></TextBox>-->
-                    <Button Grid.Column="0" Grid.Row="2" Name="loadFromFile1" Click="LoadFromFile1_OnClick">Load from file</Button>
-                    <Button Grid.Column="1" Grid.Row="2" Name="loadFromFile2" Click="LoadFromFile2_OnClick">Load from file</Button>
-                    <Button Grid.Column="2" Grid.Row="2" Name="loadFromFile3" Click="LoadFromFile3_OnClick">Load from file</Button>
-                    <Button Grid.Column="3" Grid.Row="2" Name="loadFromFile4" Click="LoadFromFile4_OnClick">Load from file</Button>
-                    <Button Grid.Column="4" Grid.Row="2" Name="loadFromFile5" Click="LoadFromFile5_OnClick">Load from file</Button>
-                    <Button Grid.Column="0" Grid.Row="3" Name="getFromWeb1" Click="GetFromWeb1_OnClick">Get from web</Button>
-                    <Button Grid.Column="1" Grid.Row="3" Name="getFromWeb2" Click="GetFromWeb2_OnClick">Get from web</Button>
-                    <Button Grid.Column="2" Grid.Row="3" Name="getFromWeb3" Click="GetFromWeb3_OnClick">Get from web</Button>
-                    <Button Grid.Column="3" Grid.Row="3" Name="getFromWeb4" Click="GetFromWeb4_OnClick">Get from web</Button>
-                    <Button Grid.Column="4" Grid.Row="3" Name="getFromWeb5" Click="GetFromWeb5_OnClick">Get from web</Button>
                     <!--<Button Grid.Column="5" Grid.Row="2" Name="getFromWeb6" Click="GetFromWeb6_OnClick">Get from web</Button>-->
                 </Grid>
             </TabItem>
