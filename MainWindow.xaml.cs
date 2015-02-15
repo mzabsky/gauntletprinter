@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -49,10 +51,6 @@ namespace GauntletPrinter
                     {
                         var deckString = decks[i].Trim();
                         
-                        var a = deckString.LastIndexOf("\n\r", System.StringComparison.Ordinal);
-                        var b = deckString.LastIndexOf("\n\n", System.StringComparison.Ordinal);
-                        //var c = deckString.LastIndexOf("\r\n", System.StringComparison.Ordinal);
-                        
                         var sideboardSeparatorPosition = Math.Max(
                             deckString.LastIndexOf("\n\r", System.StringComparison.Ordinal),
                             deckString.LastIndexOf("\n\n", System.StringComparison.Ordinal));
@@ -92,8 +90,14 @@ namespace GauntletPrinter
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
+            this.IsEnabled = false;
+            //this.InvalidateVisual();
+
+            // Give the window a chance to redraw
+            await Task.Delay(TimeSpan.FromMilliseconds(1));
+
             try
             {
                 var allCards = JsonConvert.DeserializeObject<Dictionary<string, Card>>(File.ReadAllText("AllCards.json")).Values.ToList();
@@ -190,6 +194,7 @@ namespace GauntletPrinter
                 string str = @"
                 <html>
                     <head>
+                        <meta charset=""utf-8"">
                         <style>
                             .card
                             {
@@ -237,6 +242,11 @@ namespace GauntletPrinter
 
                             str += @".card td {
                                 padding: 1px 1px 1px 1mm;
+                            }
+
+                            div.sideboard table 
+                            {
+                                border-top: 3px black dashed;
                             }
 
                             .cardNameRow {
@@ -298,10 +308,11 @@ namespace GauntletPrinter
                     <body>                
                 ";
 
-                var deckSize = decks.Max(p => p.Count) + sideboards.Max(p => p.Count);
-                for (var i = 0; i < deckSize; i++)
+                var deckSize = decks.Max(p => p.Count);
+                var totalSize = deckSize + sideboards.Max(p => p.Count);
+                for (var i = 0; i < totalSize; i++)
                 {
-                    str += @"<div class=""card"">
+                    str += @"<div class=""card " + (i >= deckSize ? "sideboard" : "") + @""">
                                 <div>
                                     <table>";
 
@@ -377,6 +388,8 @@ namespace GauntletPrinter
             {
                 MessageBox.Show(ex.ToString());
             }
+
+            this.IsEnabled = true;
         }
 
         private static List<Card> ParseDeckString(string deckString, List<Card> allCards)
@@ -417,38 +430,41 @@ namespace GauntletPrinter
             return deck;
         }
 
-        private void GetDeckFromWeb(TextBox textBox)
+        private void GetDeckFromWeb(int deckNumber)
         {
             var dialog = new GetFromWebDialog();
             if (dialog.ShowDialog() != true)
             {
                 return;
             }
+
+            this.deckInputs[deckNumber].Text = dialog.DeckString;
+            this.sideboardInputs[deckNumber].Text = dialog.SideboardString;
         }
 
         private void GetFromWeb1_OnClick(object sender, RoutedEventArgs e)
         {
-            this.GetDeckFromWeb(this.deck1);
+            this.GetDeckFromWeb(0);
         }
 
         private void GetFromWeb2_OnClick(object sender, RoutedEventArgs e)
         {
-            this.GetDeckFromWeb(this.deck2);
+            this.GetDeckFromWeb(1);
         }
 
         private void GetFromWeb3_OnClick(object sender, RoutedEventArgs e)
         {
-            this.GetDeckFromWeb(this.deck3);
+            this.GetDeckFromWeb(2);
         }
 
         private void GetFromWeb4_OnClick(object sender, RoutedEventArgs e)
         {
-            this.GetDeckFromWeb(this.deck4);
+            this.GetDeckFromWeb(3);
         }
 
         private void GetFromWeb5_OnClick(object sender, RoutedEventArgs e)
         {
-            this.GetDeckFromWeb(this.deck5);
+            this.GetDeckFromWeb(4);
         }
 
         /*private void GetFromWeb6_OnClick(object sender, RoutedEventArgs e)

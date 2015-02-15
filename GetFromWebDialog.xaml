@@ -1,14 +1,27 @@
 ﻿<Window x:Class="GauntletPrinter.GetFromWebDialog"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Get deck from web" Height="300" Width="300">
+        Title="Get deck from web" Height="450" Width="600" Loaded="GetFromWebDialog_OnLoaded" PreviewKeyDown="GetFromWebDialog_OnPreviewKeyDown" Closed="GetFromWebDialog_OnClosed">
     <Grid>
         <StackPanel Margin="5">
             <DockPanel>
                 <TextBlock DockPanel.Dock="Left" Margin="3">Deck URL: </TextBlock>
-                <TextBox DockPanel.Dock="Left" Margin="3" Name="deckUrl"></TextBox>
+                <TextBox DockPanel.Dock="Left" Margin="3" Name="deckUrl" KeyDown="DeckUrl_OnKeyDown">
+                </TextBox>
             </DockPanel>
             <Button Margin="3" Name="download" Click="Download_OnClick">Download</Button>
+            <TextBlock>Supported URLs:</TextBlock>
+            <TextBlock TextWrapping="Wrap" Padding="5">
+                <Bold>MTGGoldfish</Bold><LineBreak />
+                - http://www.mtggoldfish.com/archetype/modern-junk-17289<LineBreak />
+                - http://www.mtggoldfish.com/deck/264438<LineBreak />
+                - http://www.mtggoldfish.com/deck/download/264438<LineBreak />
+                <Bold>MTGTop8</Bold><LineBreak />
+                - http://www.mtgtop8.com/event?e=9064&amp;d=251655 <LineBreak />
+                - http://www.mtgtop8.com/export_files/deck251655.mwDeck <LineBreak />
+                <Bold>TappedOut</Bold><LineBreak />
+                - http://tappedout.net/mtg-decks/silumgars-contol/ <LineBreak />
+            </TextBlock>
         </StackPanel>
     </Grid>
 </Window>
