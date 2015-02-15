@@ -79,7 +79,7 @@
 1 Wasteland
 1 Windswept Heath
 1 Wooded Foothills
-
+==========
 1 Forest
 1 Forest
 1 Forest
@@ -180,7 +180,7 @@
 1 Talisman of Unity
 1 Lotus Petal
 1 Rafiq of the Many
-
+==========
 1 Chrome Mox
 1 Azorius Signet
 1 Coldsteel Heart
@@ -271,7 +271,7 @@
 1 City of Traitors
 1 Wasteland
 1 Grand Arbiter Augustin IV
-
+==========
 1 Command Tower
 1 Urborg, Tomb of Yawgmoth
 1 Rix Maadi, Dungeon Palace
@@ -353,7 +353,7 @@
 1 Liliana of the Veil
 1 Chandra, Pyromaster
 1 Exava, Rakdos Blood Witch
-
+==========
 1 Marath, Will of the Wild
 1 Dryad Arbor
 1 Arbor Elf

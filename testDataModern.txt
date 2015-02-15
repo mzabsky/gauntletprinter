@@ -1,0 +1,89 @@
+﻿4 Liliana of the Veil
+3 Dark Confidant
+4 Siege Rhino
+3 Scavenging Ooze
+4 Tarmogoyf
+4 Inquisition of Kozilek
+3 Thoughtseize
+2 Lingering Souls
+1 Maelstrom Pulse
+2 Dismember
+3 Path to Exile
+3 Abrupt Decay
+1 Isolated Chapel
+1 Godless Shrine
+1 Temple Garden
+2 Overgrown Tomb
+1 Plains
+2 Forest
+2 Swamp
+1 Urborg, Tomb of Yawgmoth
+4 Treetop Village
+1 Stirring Wildwood
+2 Windswept Heath
+2 Marsh Flats
+4 Verdant Catacombs
+==========
+4 Monastery Swiftspear
+4 Goblin Guide
+4 Eidolon of the Great Revel
+4 Rift Bolt
+4 Lava Spike
+3 Searing Blaze
+4 Lightning Helix
+4 Skullcrack
+4 Lightning Bolt
+1 Shard Volley
+4 Boros Charm
+1 Stomping Ground
+2 Sacred Foundry
+5 Mountain
+3 Bloodstained Mire
+4 Scalding Tarn
+2 Arid Mesa
+3 Wooded Foothills
+==========
+2 Tezzeret, Agent of Bolas
+4 Ornithopter
+4 Memnite
+4 Vault Skirge
+4 Arcbound Ravager
+4 Steel Overseer
+3 Master of Etherium
+3 Thoughtcast
+2 Welding Jar
+4 Mox Opal
+4 Springleaf Drum
+4 Cranial Plating
+1 Talisman of Dominance
+4 Darksteel Citadel
+4 Inkmoth Nexus
+4 Blinkmoth Nexus
+4 Glimmervoid
+1 Island
+==========
+4 Tarmogoyf
+2 Scavenging Ooze
+4 Snapcaster Mage
+1 Spellskite
+3 Deceiver Exarch
+3 Pestermite
+4 Serum Visions
+1 Flame Slash
+3 Remand
+2 Cryptic Command
+2 Spell Snare
+4 Lightning Bolt
+1 Electrolyze
+4 Splinter Twin
+4 Misty Rainforest
+4 Scalding Tarn
+3 Island
+1 Mountain
+1 Forest
+2 Hinterland Harbor
+2 Sulfur Falls
+2 Steam Vents
+1 Breeding Pool
+1 Stomping Ground
+1 Desolate Lighthouse

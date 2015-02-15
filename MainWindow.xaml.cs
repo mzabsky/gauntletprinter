@@ -1,4 +1,4 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows.Forms;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -7,6 +7,8 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
+using MessageBox = System.Windows.MessageBox;
+using TextBox = System.Windows.Controls.TextBox;
 
 namespace GauntletPrinter
 {
@@ -15,9 +17,47 @@ namespace GauntletPrinter
     /// </summary>
     public partial class MainWindow
     {
+        private List<TextBox> deckInputs = new List<TextBox>();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            this.deckInputs.Add(this.deck1);
+            this.deckInputs.Add(this.deck2);
+            this.deckInputs.Add(this.deck3);
+            this.deckInputs.Add(this.deck4);
+            this.deckInputs.Add(this.deck5);
+        }
+
+        private void LoadFromFile(string path, int deckNumber)
+        {
+            if (File.Exists(path))
+            {
+                var content = File.ReadAllText(path);
+                var decks = content.Split(new string[] { "\n==========\n", "\n\r==========\n\r", "\r\n==========\r\n" }, StringSplitOptions.None);
+                for (int i = 0; i < decks.Length; i++)
+                {
+                    if (deckNumber + i < deckInputs.Count)
+                    {
+                        this.deckInputs[deckNumber + i].Text = decks[i];
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Input file \"" + path + "\" not found.");
+            }
+        }
+
+        private void LoadFromFileWithDialog(int deckNumber)
+        {
+            var dialog = new OpenFileDialog();
+            dialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                this.LoadFromFile(dialog.FileName, deckNumber);
+            }
         }
 
         private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
@@ -25,21 +65,7 @@ namespace GauntletPrinter
             var args = Environment.GetCommandLineArgs();
             if (args.Length > 1)
             {
-                var path = args[1];
-                if (File.Exists(path))
-                {
-                    var content = File.ReadAllText(path);
-                    var decks = content.Split(new string[] {"\n\n"}, StringSplitOptions.None);
-                    if (decks.Length > 0) this.deck1.Text = decks[0];
-                    if (decks.Length > 1) this.deck2.Text = decks[1];
-                    if (decks.Length > 2) this.deck3.Text = decks[2];
-                    if (decks.Length > 3) this.deck4.Text = decks[3];
-                    if (decks.Length > 4) this.deck5.Text = decks[4];
-                }
-                else
-                {
-                    MessageBox.Show("Input file \"" + path + "\" not found.");
-                }
+                this.LoadFromFile(args[1], 0);
             }
         }
 
@@ -395,5 +421,30 @@ namespace GauntletPrinter
         {
             this.GetDeckFromWeb(this.deck6);
         }*/
+
+        private void LoadFromFile1_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.LoadFromFileWithDialog(0);
+        }
+
+        private void LoadFromFile2_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.LoadFromFileWithDialog(1);
+        }
+
+        private void LoadFromFile3_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.LoadFromFileWithDialog(2);
+        }
+
+        private void LoadFromFile4_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.LoadFromFileWithDialog(3);
+        }
+
+        private void LoadFromFile5_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.LoadFromFileWithDialog(4);
+        }
     }
 }

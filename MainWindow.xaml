@@ -20,6 +20,7 @@
                         <RowDefinition Height="20"></RowDefinition>
                         <RowDefinition></RowDefinition>
                         <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Column="0" Grid.Row="0">Deck 1</TextBlock>
                     <TextBlock Grid.Column="1" Grid.Row="0">Deck 2</TextBlock>
@@ -33,11 +34,16 @@
                     <TextBox Grid.Column="3" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck4"></TextBox>
                     <TextBox Grid.Column="4" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck5"></TextBox>
                     <!--<TextBox Grid.Column="5" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Name="deck6"></TextBox>-->
-                    <Button Grid.Column="0" Grid.Row="2" Name="getFromWeb1" Click="GetFromWeb1_OnClick">Get from web</Button>
-                    <Button Grid.Column="1" Grid.Row="2" Name="getFromWeb2" Click="GetFromWeb2_OnClick">Get from web</Button>
-                    <Button Grid.Column="2" Grid.Row="2" Name="getFromWeb3" Click="GetFromWeb3_OnClick">Get from web</Button>
-                    <Button Grid.Column="3" Grid.Row="2" Name="getFromWeb4" Click="GetFromWeb4_OnClick">Get from web</Button>
-                    <Button Grid.Column="4" Grid.Row="2" Name="getFromWeb5" Click="GetFromWeb5_OnClick">Get from web</Button>
+                    <Button Grid.Column="0" Grid.Row="2" Name="loadFromFile1" Click="LoadFromFile1_OnClick">Load from file</Button>
+                    <Button Grid.Column="1" Grid.Row="2" Name="loadFromFile2" Click="LoadFromFile2_OnClick">Load from file</Button>
+                    <Button Grid.Column="2" Grid.Row="2" Name="loadFromFile3" Click="LoadFromFile3_OnClick">Load from file</Button>
+                    <Button Grid.Column="3" Grid.Row="2" Name="loadFromFile4" Click="LoadFromFile4_OnClick">Load from file</Button>
+                    <Button Grid.Column="4" Grid.Row="2" Name="loadFromFile5" Click="LoadFromFile5_OnClick">Load from file</Button>
+                    <Button Grid.Column="0" Grid.Row="3" Name="getFromWeb1" Click="GetFromWeb1_OnClick">Get from web</Button>
+                    <Button Grid.Column="1" Grid.Row="3" Name="getFromWeb2" Click="GetFromWeb2_OnClick">Get from web</Button>
+                    <Button Grid.Column="2" Grid.Row="3" Name="getFromWeb3" Click="GetFromWeb3_OnClick">Get from web</Button>
+                    <Button Grid.Column="3" Grid.Row="3" Name="getFromWeb4" Click="GetFromWeb4_OnClick">Get from web</Button>
+                    <Button Grid.Column="4" Grid.Row="3" Name="getFromWeb5" Click="GetFromWeb5_OnClick">Get from web</Button>
                     <!--<Button Grid.Column="5" Grid.Row="2" Name="getFromWeb6" Click="GetFromWeb6_OnClick">Get from web</Button>-->
                 </Grid>
             </TabItem>
