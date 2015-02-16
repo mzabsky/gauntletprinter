@@ -426,6 +426,8 @@ namespace GauntletPrinter
                     card.Text = Regex.Replace(card.Text, rule.Key, rule.Value);
                 }
 
+                card.Type = card.Type.Replace('—', '-');
+
                 /*if (omitTypeLineForBasics && card.Types.Contains("Basic"))
                 {
                     card.TextLength = 0; // Title

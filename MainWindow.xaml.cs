@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
@@ -101,7 +102,7 @@ namespace GauntletPrinter
 
             try
             {
-                var allCards = JsonConvert.DeserializeObject<Dictionary<string, Card>>(File.ReadAllText("AllCards.json")).Values.ToList();
+                var allCards = JsonConvert.DeserializeObject<Dictionary<string, Card>>(File.ReadAllText("AllCards.json", Encoding.UTF8)).Values.ToList();
 
                 var additionalCards = new List<Card>();
 
@@ -374,7 +375,7 @@ namespace GauntletPrinter
                             </div>";
                 }
 
-                File.WriteAllText("cards.html", str);
+                File.WriteAllText("cards.html", str, new UTF8Encoding(true));
 
                 if (MessageBox.Show("File generated. Do you wish to open it?" + Environment.NewLine + Environment.NewLine + "WARNING: Internet Explorer does not display the cards correctly. Google Chrome is recommended to print the cards.", "Finished", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
@@ -511,12 +512,13 @@ namespace GauntletPrinter
             this.IsEnabled = false;
 
             var client = new WebClient();
+            client.Encoding = Encoding.UTF8;
             var requestUri = new Uri("http://mtgjson.com/json/AllCards.json");
             try
             {
                 string result = await client.DownloadStringTaskAsync(requestUri);
 
-                File.WriteAllText("AllCards.json", result);
+                File.WriteAllText("AllCards.json", result, Encoding.UTF8);
 
                 MessageBox.Show("Card data updated!");
             }
