@@ -33,6 +33,8 @@ namespace GauntletPrinter
 
         private void ParseGoldfishDeck(string result)
         {
+            result = Regex.Replace(result, "^//.*$", "", RegexOptions.Multiline);
+
             var sideboardSeparatorPosition = Math.Max(
                     result.LastIndexOf("\n\r", System.StringComparison.Ordinal),
                     result.LastIndexOf("\n\n", System.StringComparison.Ordinal));
