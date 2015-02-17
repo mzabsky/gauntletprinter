@@ -57,10 +57,17 @@ namespace GauntletPrinter
                             deckString.LastIndexOf("\n\r", System.StringComparison.Ordinal),
                             deckString.LastIndexOf("\n\n", System.StringComparison.Ordinal));
 
-                        this.deckInputs[deckNumber + i].Text = deckString.Substring(0, sideboardSeparatorPosition).Trim();
                         if (sideboardSeparatorPosition != -1)
                         {
-                            this.sideboardInputs[deckNumber + i].Text = deckString.Substring(sideboardSeparatorPosition + 1).Trim();
+                            this.deckInputs[deckNumber + i].Text =
+                                deckString.Substring(0, sideboardSeparatorPosition).Trim();
+                            this.sideboardInputs[deckNumber + i].Text =
+                                deckString.Substring(sideboardSeparatorPosition + 1).Trim();
+                        }
+                        else
+                        {
+                            this.deckInputs[deckNumber + i].Text = deckString;
+                            this.sideboardInputs[deckNumber + i].Text = "";
                         }
                     }
                 }
