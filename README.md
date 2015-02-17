@@ -6,6 +6,9 @@ It is an application for Windows (.Net Framework 4.5 required).
 
 **How does it work?** You fill in the decklists. The tool will then load all the cards, shorten their rules text as much as possible and then it arranges the cards so they fit onto the proxies. It generates a HTML file that can be printed using a web browser (Warning, it doesn't work with Internet Explorer, Google Chrome works best).
 
+[Download application for Windows](http://puu.sh/g1f2s/45b78c18ce.zip)
+-------------------------
+
 Features
 ---------------------------
 - Up to 5 decks printed on a single deck of proxies (4 generally fit quite easily, 5 are not guaranteed)
@@ -18,9 +21,21 @@ Sample gauntlets
 ---------------------------
 These are gauntlets generated with this tool.
 
-**Modern** ([colored maindeck PDF](http://puu.sh/eyBQT/51615aafce.pdf), colored sideboard PDF](http://puu.sh/eyALp/fe24c5394c.pdf), [grayscale maindeck PDF](http://puu.sh/eyAlv/5a5749938f.pdf), [grayscale sideboard PDF](http://puu.sh/eyAzl/f0b7fa580b.pdf)) - contains [Vincent Pau's Pod](http://www.mtggoldfish.com/deck/258973), [Stephen Berrios's UR Delver](http://www.mtggoldfish.com/deck/258717), [Erik Smith's Junk](http://www.mtggoldfish.com/deck/258960) and [osmanozguney's UR Twin](http://www.mtggoldfish.com/deck/258740).
+**Modern** ([colored maindeck PDF](http://puu.sh/g1eFU/f33d818329.pdf), [grayscale maindeck PDF](http://puu.sh/eyAlv/5a5749938f.pdf)) - contains [Vincent Pau's Pod](http://www.mtggoldfish.com/deck/258973), [Stephen Berrios's UR Delver](http://www.mtggoldfish.com/deck/258717), [Erik Smith's Junk](http://www.mtggoldfish.com/deck/258960) and [osmanozguney's UR Twin](http://www.mtggoldfish.com/deck/258740).
 
-**Duel Commander** ([colored PDF](http://puu.sh/eyzIX/746537535d.pdf), [grayscale PDF](http://puu.sh/eyzYB/a4e87936d3.pdf)) - contains [icecoldjazz's Azusa](http://www.mtgsalvation.com/forums/the-game/commander-edh/forum-1-vs-1-commander-decklists/564451-azusa-lost-but-seeking-aka-ramp-dec), [hakz's Rafiq](http://forums.mtgsalvation.com/showthread.php?t=392838), [Leroy's Grand Arbiter Augustin](http://forums.mtgsalvation.com/showthread.php?t=497498) and [dawN's Exava](http://forums.mtgsalvation.com/showthread.php?t=341982).
+**Duel Commander** ([colored PDF](http://puu.sh/g1edX/853d40b479.pdf), [grayscale PDF](http://puu.sh/g1eEN/5fc26193e6.pdf)) - contains [icecoldjazz's Azusa](http://www.mtgsalvation.com/forums/the-game/commander-edh/forum-1-vs-1-commander-decklists/564451-azusa-lost-but-seeking-aka-ramp-dec), [hakz's Rafiq](http://forums.mtgsalvation.com/showthread.php?t=392838), [Leroy's Grand Arbiter Augustin](http://forums.mtgsalvation.com/showthread.php?t=497498) and [dawN's Exava](http://forums.mtgsalvation.com/showthread.php?t=341982).
 
-[Download application for Windows](http://puu.sh/fEUxN/d6d7abed84.zip)
--------------------------
+Version History
+------------------------------
+**Version 1.2** (17.2.2015)
+- Added online decks (MTGGoldfish, MTGTop8 and TappedOut supported)
+- Added sideboards
+- Added support for 5th deck
+- Added option to omit type line for basic lands
+- Improved the rules text shortening engine with 80 additional rules (upping the count to almost 300)
+
+**Version 1.1** (15.1.2015)
+- Added grayscale and color printing modes - colored mode has colored indentification strips while grayscale mode has numeric identifiers and special grayscale symbols
+
+**Version 1.0** (14.1.2015)
+- Initial release
