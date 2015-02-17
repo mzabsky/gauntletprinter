@@ -21,7 +21,7 @@ Sample gauntlets
 ---------------------------
 These are gauntlets generated with this tool.
 
-**Modern** ([colored maindeck PDF](http://puu.sh/g1eFU/f33d818329.pdf), [grayscale maindeck PDF](http://puu.sh/eyAlv/5a5749938f.pdf)) - contains [Vincent Pau's Pod](http://www.mtggoldfish.com/deck/258973), [Stephen Berrios's UR Delver](http://www.mtggoldfish.com/deck/258717), [Erik Smith's Junk](http://www.mtggoldfish.com/deck/258960) and [osmanozguney's UR Twin](http://www.mtggoldfish.com/deck/258740).
+**Modern** ([colored maindeck PDF](http://puu.sh/g1eFU/f33d818329.pdf), [grayscale maindeck PDF](http://puu.sh/eyAlv/5a5749938f.pdf)) - contains Brandom Remley's Junk, Oleg Plisov's Burn, Sebastian Pozzo's Affinity and Jason Schousboe's Tarmo-Twin.
 
 **Duel Commander** ([colored PDF](http://puu.sh/g1edX/853d40b479.pdf), [grayscale PDF](http://puu.sh/g1eEN/5fc26193e6.pdf)) - contains [icecoldjazz's Azusa](http://www.mtgsalvation.com/forums/the-game/commander-edh/forum-1-vs-1-commander-decklists/564451-azusa-lost-but-seeking-aka-ramp-dec), [hakz's Rafiq](http://forums.mtgsalvation.com/showthread.php?t=392838), [Leroy's Grand Arbiter Augustin](http://forums.mtgsalvation.com/showthread.php?t=497498) and [dawN's Exava](http://forums.mtgsalvation.com/showthread.php?t=341982).
 
