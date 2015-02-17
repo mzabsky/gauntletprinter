@@ -345,7 +345,6 @@
     <Content Include="symbols\untap.svg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="testDataModernSideboard.txt" />
     <Resource Include="testDataModern.txt" />
     <Resource Include="testDataEdh.txt" />
     <EmbeddedResource Include="Properties\Resources.resx">
