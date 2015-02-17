@@ -245,6 +245,10 @@ namespace GauntletPrinter
 
                                 tr.card4 td{
                                     border-left: 4px #FFBFBC solid;
+                                }
+
+                                tr.card5 td{
+                                    border-left: 4px #83EBE4 solid;
                                 }";
                             }
                             
