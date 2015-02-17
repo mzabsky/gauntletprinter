@@ -21,9 +21,9 @@ Sample gauntlets
 ---------------------------
 These are gauntlets generated with this tool.
 
-**Modern** ([colored maindeck PDF](http://puu.sh/g1eFU/f33d818329.pdf), [grayscale maindeck PDF](http://puu.sh/eyAlv/5a5749938f.pdf)) - contains Brandom Remley's Junk, Oleg Plisov's Burn, Sebastian Pozzo's Affinity and Jason Schousboe's Tarmo-Twin.
+**Modern** ([colored maindeck PDF](http://puu.sh/g1eFU/f33d818329.pdf), [grayscale maindeck PDF](http://puu.sh/g1gEB/8f3c91b026.pdf)) - contains Brandom Remley's Junk, Oleg Plisov's Burn, Sebastian Pozzo's Affinity and Jason Schousboe's Tarmo-Twin.
 
-**Duel Commander** ([colored PDF](http://puu.sh/g1edX/853d40b479.pdf), [grayscale PDF](http://puu.sh/g1eEN/5fc26193e6.pdf)) - contains [icecoldjazz's Azusa](http://www.mtgsalvation.com/forums/the-game/commander-edh/forum-1-vs-1-commander-decklists/564451-azusa-lost-but-seeking-aka-ramp-dec), [hakz's Rafiq](http://forums.mtgsalvation.com/showthread.php?t=392838), [Leroy's Grand Arbiter Augustin](http://forums.mtgsalvation.com/showthread.php?t=497498) and [dawN's Exava](http://forums.mtgsalvation.com/showthread.php?t=341982).
+**Duel Commander** ([colored PDF](http://puu.sh/g1edX/853d40b479.pdf), [grayscale PDF](http://puu.sh/g1gHI/d51b5b12b5.pdf)) - contains [icecoldjazz's Azusa](http://www.mtgsalvation.com/forums/the-game/commander-edh/forum-1-vs-1-commander-decklists/564451-azusa-lost-but-seeking-aka-ramp-dec), [hakz's Rafiq](http://forums.mtgsalvation.com/showthread.php?t=392838), [Leroy's Grand Arbiter Augustin](http://forums.mtgsalvation.com/showthread.php?t=497498) and [dawN's Exava](http://forums.mtgsalvation.com/showthread.php?t=341982).
 
 Version History
 ------------------------------
