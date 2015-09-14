@@ -76,8 +76,8 @@ namespace GauntletPrinter
         {
             var halves = result.Split(new [] {"Sideboard:"}, StringSplitOptions.None);
 
-            this.DeckString = halves[0].Trim();
-            this.SideboardString = halves.Length > 0 ? halves[1].Trim() : "";
+            this.DeckString = halves[0].Trim().Replace("/", "//");
+            this.SideboardString = halves.Length > 0 ? halves[1].Trim().Replace("/", "//") : "";
         }
 
         private async void Download_OnClick(object sender, RoutedEventArgs e)
@@ -200,7 +200,7 @@ namespace GauntletPrinter
                 }
                 else if (uri.Host == "tappedout.net")
                 {
-                    var match = Regex.Match(uri.LocalPath, "/mtg-decks/([a-z0-9\\-]+)/");
+                    var match = Regex.Match(uri.LocalPath, "/mtg-decks/([a-zA-Z0-9\\-]+)/");
                     if (match.Length > 0)
                     {
                         var requestUri = new Uri("http://www.tappedout.net/mtg-decks/" + match.Groups[1].Captures[0].ToString() + "/?fmt=txt");
@@ -223,12 +223,12 @@ namespace GauntletPrinter
                     MessageBox.Show("Unsupported website.");
                 }
             }
-            catch (WebException)
+            catch (WebException ex)
             {
                 if (!isClosed)
                 {
                     MessageBox.Show(
-                    "Could not download the page from the web. This may mean the URL is not correct or that your computer is not connected to the internet.");   
+                    "Could not download the page from the web. This may mean the URL is not correct or that your computer is not connected to the internet.\n\nMessage: " + ex.Message);   
                 }
             }
             catch (Exception ex)
