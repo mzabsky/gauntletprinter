@@ -1,7 +1,7 @@
 ﻿<Window x:Class="GauntletPrinter.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="GauntletPrinter 1.2" Height="750" Width="850" Loaded="MainWindow_OnLoaded" WindowState="Maximized">
+        Title="GauntletPrinter 1.3" Height="750" Width="850" Loaded="MainWindow_OnLoaded" WindowState="Maximized">
     <DockPanel>
         <!--<TextBlock FontSize="20" DockPanel.Dock="Top">1) Fill in one or more decklists</TextBlock>-->
         <Button FontSize="20" Padding="5" Height="50" DockPanel.Dock="Bottom" Name="generate" Click="Button_Click">Generate</Button>
