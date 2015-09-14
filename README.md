@@ -27,6 +27,10 @@ These are gauntlets generated with this tool.
 
 Version History
 ------------------------------
+**Version 1.3** (14.9.2015)
+- Fixed deck import from TappedOut sometimes not working.
+- Updated data file for Origins.
+
 **Version 1.2** (17.2.2015)
 - Added online decks (MTGGoldfish, MTGTop8 and TappedOut supported)
 - Added sideboards
