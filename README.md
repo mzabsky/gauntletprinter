@@ -6,7 +6,7 @@ It is an application for Windows (.Net Framework 4.5 required).
 
 **How does it work?** You fill in the decklists. The tool will then load all the cards, shorten their rules text as much as possible and then it arranges the cards so they fit onto the proxies. It generates a HTML file that can be printed using a web browser (Warning, it doesn't work with Internet Explorer, Google Chrome works best).
 
-[Download application for Windows](http://puu.sh/g1f2s/45b78c18ce.zip)
+[Download application for Windows](http://puu.sh/kblTF/2db1571769.zip)
 -------------------------
 
 Features
