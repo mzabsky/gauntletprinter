@@ -27,11 +27,11 @@ These are gauntlets generated with this tool.
 
 Version History
 ------------------------------
-**Version 1.4 (26.9.2015)
+**Version 1.4** (26.9.2015)
 - Added several more rules text shortening rules, mostly to better support new ability words from DTK, Origins and BFZ.
 - Fixed release package.
 
-**Version 1.3 (14.9.2015)
+**Version 1.3** (14.9.2015)
 - Fixed deck import from TappedOut sometimes not working.
 - Updated data file for Origins.
 
