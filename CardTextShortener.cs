@@ -184,6 +184,9 @@ namespace GauntletPrinter
             {"token", "tkn"},
             {"As an additional cost to cast ~", "As an additional cost"},
             {"his or her", "his"},
+            {"power and toughness", "P/T"},
+            {" power ", " P "},
+            {" toughness ", " T "},
             {"^;", ""},
             {"^ ;", ""},
             {" ;", ";"},
@@ -194,7 +197,7 @@ namespace GauntletPrinter
 
             // Ability words
             {"Ferocious - ", ""},
-            {"you control a creature with power 4 or greater", "ferocious"},
+            {"you control a creature with P 4 or greater", "ferocious"},
             {"Battalion - Whenever ~ and at least two other creatures attack, ", "Battalion - "},
             {"Channel - ", ""},
             {"Chroma - ", ""},
